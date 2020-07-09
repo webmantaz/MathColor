@@ -42,12 +42,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var missed = 0
     var showCorrect = false
     var showWrong = false
+    var totalSeconds = 0.0
         
     override func didMove(to view: SKView) {
         
         physicsWorld.contactDelegate = self
         keypadLabel.text = ""
-        spawnQuestion(opertator: operatorEvent.add)
+        let initialQuestionPosition = spawnQuestion(opertator: operatorEvent.add)
         
         let barrierRect = CGRect(x: 0.0, y: 0.0, width: frame.maxX, height: 11.0)
         let barrier = SKShapeNode(rect: barrierRect)
@@ -61,26 +62,60 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(barrier)
         
+        let t=8.0
+        
+        restartTimer()
+        
+        let distanceFromQuestionToBarrier = GetDistance(from: initialQuestionPosition, to: barrier.position)
+        let deltaGravity = ((2.0 * Double(distanceFromQuestionToBarrier))/(t*t))/170.0
+        print("hi")
+        print(deltaGravity)
+        physicsWorld.gravity = CGVector(dx: 0.0, dy: -1*deltaGravity)
+        
+        print(distanceFromQuestionToBarrier)
+        
         spawnKeypad()
         keypadLabel.position = CGPoint(x: 550.0, y: 100.0)
         self.addChild(keypadLabel)
         keypadLabel.fontColor = UIColor.blue
         keypadLabel.fontSize = 128
-        keypadLabel.fontName = "impact"
         
         scoreLabel.text = "0"
         scoreLabel.fontColor = UIColor.blue
         scoreLabel.position = CGPoint(x: frame.maxX - 200, y: frame.maxY-150)
-        scoreLabel.fontName = "impact"
         scoreLabel.fontSize = 96
         self.addChild(scoreLabel)
-        
         missedLabel.text = "0"
         missedLabel.fontColor = UIColor.blue
         missedLabel.fontSize = 96
-        missedLabel.fontName = "impact"
         missedLabel.position = CGPoint(x: frame.minX + 200, y: frame.maxY-150)
         self.addChild(missedLabel)
+    }
+    
+    func restartTimer(){
+           
+        let wait:SKAction = SKAction.wait(forDuration: 1)
+           let finishTimer:SKAction = SKAction.run {
+               
+            self.totalSeconds += 1
+               
+               
+               
+               self.restartTimer()
+           }
+           
+           let seq:SKAction = SKAction.sequence([wait, finishTimer])
+           self.run(seq)
+           
+           
+    }
+    
+    func CGPointDistanceSquared(from: CGPoint, to: CGPoint) -> CGFloat {
+        return (from.x - to.x) * (from.x - to.x) + (from.y - to.y) * (from.y - to.y)
+    }
+
+    func GetDistance(from: CGPoint, to: CGPoint) -> CGFloat {
+        return sqrt(CGPointDistanceSquared(from: from, to: to))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -160,7 +195,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         alertNode.run(fade)
     }
     
-    func spawnQuestion(opertator: operatorEvent)
+    func spawnQuestion(opertator: operatorEvent) -> CGPoint
     {
         let o = OperatorString()
         o.firstNumber =  Int.random(in: 1 ..< 12)
@@ -173,11 +208,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let size = CGSize(width: xsize, height: 70.0)
         mathQuestion.physicsBody = SKPhysicsBody(rectangleOf: size)
         mathQuestion.position = CGPoint(x: frame.midX, y: frame.maxY*0.8)
+        let initalPosition = mathQuestion.position
         mathQuestion.physicsBody?.categoryBitMask = CollisinType.question.rawValue
         mathQuestion.physicsBody?.isDynamic = true
         mathQuestion.physicsBody?.collisionBitMask = CollisinType.barrier.rawValue
         mathQuestion.physicsBody?.contactTestBitMask = CollisinType.barrier.rawValue
         self.addChild(mathQuestion)
+        
+        return initalPosition
         
         
     }
@@ -264,14 +302,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if nodeB.name == "barrier"
         {
-            print("boom")
             nodeA.removeFromParent()
             respawn = true
             missed += 1
             keypadLabel.text = ""
             kpLabel = ""
             middleAlert(imageName: "wrong_big.png")
-            
+            print(self.totalSeconds)
         }
     }
     

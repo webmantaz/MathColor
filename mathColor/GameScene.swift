@@ -42,7 +42,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var missed = 0
     var showCorrect = false
     var showWrong = false
-    var totalSeconds = 0.0
         
     override func didMove(to view: SKView) {
         
@@ -63,16 +62,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(barrier)
         
         let t=8.0
-        
-        restartTimer()
-        
+        let ppm = 150.0
         let distanceFromQuestionToBarrier = GetDistance(from: initialQuestionPosition, to: barrier.position)
-        let deltaGravity = ((2.0 * Double(distanceFromQuestionToBarrier))/(t*t))/170.0
-        print("hi")
-        print(deltaGravity)
+        let deltaGravity = ((2.0 * Double(distanceFromQuestionToBarrier))/(t*t*ppm))
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -1*deltaGravity)
-        
-        print(distanceFromQuestionToBarrier)
         
         spawnKeypad()
         keypadLabel.position = CGPoint(x: 550.0, y: 100.0)
@@ -92,23 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(missedLabel)
     }
     
-    func restartTimer(){
-           
-        let wait:SKAction = SKAction.wait(forDuration: 1)
-           let finishTimer:SKAction = SKAction.run {
-               
-            self.totalSeconds += 1
-               
-               
-               
-               self.restartTimer()
-           }
-           
-           let seq:SKAction = SKAction.sequence([wait, finishTimer])
-           self.run(seq)
-           
-           
-    }
+   
     
     func CGPointDistanceSquared(from: CGPoint, to: CGPoint) -> CGFloat {
         return (from.x - to.x) * (from.x - to.x) + (from.y - to.y) * (from.y - to.y)
@@ -308,7 +285,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             keypadLabel.text = ""
             kpLabel = ""
             middleAlert(imageName: "wrong_big.png")
-            print(self.totalSeconds)
         }
     }
     

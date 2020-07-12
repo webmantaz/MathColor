@@ -29,7 +29,7 @@ enum CollisinType : UInt32 {
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
+       
     var mathQuestion = SKNode()
     var keypadLabel = SKLabelNode()
     var scoreLabel = SKLabelNode()
@@ -42,13 +42,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var missed = 0
     var showCorrect = false
     var showWrong = false
-        
+    
+    var levelName = ""
+    var operators = ["A"]
+    var numbersToUse = [1]
+    var chances = 0
+    var minToPass = 0
+    var timeToFall = 0.0
+    
+    var attempts = 0
+    var levelPassed = false
+    
+            
     override func didMove(to view: SKView) {
         
         physicsWorld.contactDelegate = self
-        keypadLabel.text = ""
-        let initialQuestionPosition = spawnQuestion(opertator: operatorEvent.add)
         
+        let l = MathLevel()
+        l.getLevel(number: 1)
+        levelName = l.levelName
+        operators = l.operators
+        numbersToUse = l.numbersToUse
+        timeToFall = l.timeToFall
+        chances = l.chances
+        minToPass = l.minToPass
+        
+        keypadLabel.text = ""
+        let initialQuestionPosition = spawnQuestion(operators: operators, numbers: numbersToUse)
+        self.attempts += 1
         let barrierRect = CGRect(x: 0.0, y: 0.0, width: frame.maxX, height: 11.0)
         let barrier = SKShapeNode(rect: barrierRect)
         barrier.fillColor = UIColor.blue
@@ -61,7 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(barrier)
         
-        let t=8.0
+        let t=timeToFall
         let ppm = 150.0
         let distanceFromQuestionToBarrier = GetDistance(from: initialQuestionPosition, to: barrier.position)
         let deltaGravity = ((2.0 * Double(distanceFromQuestionToBarrier))/(t*t*ppm))
@@ -83,6 +104,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         missedLabel.fontSize = 96
         missedLabel.position = CGPoint(x: frame.minX + 200, y: frame.maxY-150)
         self.addChild(missedLabel)
+        
+        let levelNameNode = SKLabelNode()
+        levelNameNode.text = levelName
+        levelNameNode.fontColor = UIColor.blue
+        levelNameNode.fontSize = 96
+        levelNameNode.position = CGPoint(x: frame.midX, y: frame.maxY-250)
+        self.addChild(levelNameNode)
     }
     
    
@@ -172,12 +200,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         alertNode.run(fade)
     }
     
-    func spawnQuestion(opertator: operatorEvent) -> CGPoint
+    func spawnQuestion(operators: [String], numbers:[Int]) -> CGPoint
     {
         let o = OperatorString()
-        o.firstNumber =  Int.random(in: 1 ..< 12)
-        o.secondNumber = Int.random(in: 1 ..< 12)
-        o.operatorName = OperatorSymbols.multiplication
+        let fn = Int.random(in: 0 ..< numbers.count)
+        let ln = Int.random(in: 0 ..< numbers.count)
+        o.firstNumber = numbers[fn]
+        o.secondNumber = numbers[ln]
+        let op = Int.random(in: 0 ..< operators.count)
+        switch operators[op] {
+        case "A":
+            o.operatorName = OperatorSymbols.addition
+        case "S":
+            o.operatorName = OperatorSymbols.subtraction
+        case "M":
+            o.operatorName  = OperatorSymbols.multiplication
+        case "D":
+            o.operatorName = OperatorSymbols.division
+        default:
+            o.operatorName = OperatorSymbols.addition
+        }
         mathQuestion = o.buildNode()
         result = o.calculateResult()
         let numberOfNodesInMathQuestion = mathQuestion.children.count
@@ -266,8 +308,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if respawn == true
         {
-            spawnQuestion(opertator: operatorEvent.add)
-            respawn = false
+            if attempts <= chances
+            {
+                spawnQuestion(operators: operators, numbers: numbersToUse)
+                self.attempts += 1
+                respawn = false
+            } else {
+                respawn = false
+                if score > minToPass
+                {
+                    levelPassed = true
+                } else {
+                    levelPassed = false
+                }
+            }
         }
         scoreLabel.text = String(score)
         missedLabel.text = String(missed)

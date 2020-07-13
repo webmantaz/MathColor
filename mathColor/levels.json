@@ -2,8 +2,8 @@
 		{
 			"levelName":"Entry",
 			"levelNumber":1,
-			"chances":20,
-			"minToPass":5,
+			"chances":5,
+			"minToPass":1,
 			"timeToFall":8,
 			"numbersToUse":[1,2,3],
 			"operators":["M"],

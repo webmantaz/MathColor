@@ -44,7 +44,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var showWrong = false
     
     var levelName = ""
-    var levelNumber = 0
+    var levelNumber = 1
     var operators = ["A"]
     var numbersToUse = [1]
     var chances = 0
@@ -60,7 +60,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         
         let l = MathLevel()
-        l.getLevel(number: l.levelNumber)
+        l.getLevel(number: levelNumber)
         let defaults = UserDefaults.standard
         defaults.set(l.levelNumber, forKey: "CurrentLevel")
 
@@ -313,14 +313,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if respawn == true
         {
-            if attempts <= chances
+            if attempts < chances
             {
                 spawnQuestion(operators: operators, numbers: numbersToUse)
                 self.attempts += 1
                 respawn = false
             } else {
                 respawn = false
-                if score > minToPass
+                if score >= minToPass
                 {
                     levelPassed = true
                     let defaults = UserDefaults.standard
@@ -355,7 +355,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func changeScene()
     {
-        let scene = SKScene(fileNamed: "BetweenLevels")!
+        let scene = BetweenLevels(fileNamed: "BetweenLevels")!
         let transition = SKTransition.moveIn(with: .right, duration: 1)
         self.view?.presentScene(scene, transition: transition)
     }

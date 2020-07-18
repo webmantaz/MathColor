@@ -59,9 +59,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         physicsWorld.contactDelegate = self
         
+        let defaults = UserDefaults.standard
+        levelNumber = defaults.integer(forKey: "CurrentLevel")
+        print(levelNumber)
         let l = MathLevel()
         l.getLevel(number: levelNumber)
-        let defaults = UserDefaults.standard
         defaults.set(l.levelNumber, forKey: "CurrentLevel")
 
         levelName = l.levelName
@@ -329,7 +331,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 } else {
                     levelPassed = false
                     let defaults = UserDefaults.standard
-                    defaults.set(self.levelNumber, forKey: "LevelCompleted")
+                    defaults.set(self.levelNumber-1, forKey: "LevelCompleted")
                     changeScene()
                 }
             }
@@ -356,6 +358,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func changeScene()
     {
         let scene = BetweenLevels(fileNamed: "BetweenLevels")!
+        scene.scaleMode = .aspectFill
         let transition = SKTransition.moveIn(with: .right, duration: 1)
         self.view?.presentScene(scene, transition: transition)
     }

@@ -24,7 +24,10 @@ class MathLevel {
     var missedSoundPrefix : String
     var correctSoundPrefix : String
     var soundtrack : String
-    var levels: [Level]
+    var multiplicationLevels: [Level]
+    var divisionLevels : [Level]
+    var additionLevels = [Level]
+    var subtractionLevels = [Level]
 
     
     init() {
@@ -42,18 +45,24 @@ class MathLevel {
         self.missedSoundPrefix = ""
         self.correctSoundPrefix = ""
         self.soundtrack = ""
-        self.levels = Bundle.main.decode([Level].self, from: "levels.json")
+        self.multiplicationLevels = Bundle.main.decode([Level].self, from: "multiplicationLevels.json")
+        
         
     }
     
     func getLevel(number:Int)
     {
-        let level = levels[number-1]
+        var tmpNumber = number
+        if number == 0
+        {
+            tmpNumber = 1
+        } else {
+            tmpNumber = number
+        }
+        let level = levels[tmpNumber-1]
                 
-       
-        
-        
         self.levelName = level.levelName
+        self.levelNumber = level.levelNumber
         self.operators = level.operators
         self.numbersToUse = level.numbersToUse
         self.chances = level.chances

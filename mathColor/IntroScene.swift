@@ -22,14 +22,23 @@ class IntroScene : SKScene
         titleNode.position = CGPoint(x: frame.midX, y: frame.midY)
         titleNode.text = "Wizard Math"
         self.addChild(titleNode)
+    
+        let additionButtonNode = SKSpriteNode(imageNamed: "addition.png")
+        additionButtonNode.name = "addition"
+        additionButtonNode.position = CGPoint(x: frame.minX+100, y: frame.midY-100)
+        self.addChild(additionButtonNode)
         
-        let button = CGRect(x: frame.midX-150, y: frame.midY-150, width: 300, height: 100)
-        let startButtonNode = SKShapeNode(rect: button)
-        startButtonNode.name = "start"
-        startButtonNode.zPosition = 10
-        startButtonNode.fillColor = UIColor.yellow
+        let multiplicationButtonNode = SKSpriteNode(imageNamed: "multiply.png")
+        multiplicationButtonNode.name = "multiplication"
+        multiplicationButtonNode.position = CGPoint(x: frame.minX+300, y: frame.midY-100)
+        self.addChild(multiplicationButtonNode)
         
-        self.addChild(startButtonNode)
+        let dividedButtonNode = SKSpriteNode(imageNamed: "dividedby.png")
+        dividedButtonNode.name = "multiplication"
+        dividedButtonNode.position = CGPoint(x: frame.minX+500, y: frame.midY-100)
+        self.addChild(dividedButtonNode)
+        
+         
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

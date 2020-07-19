@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6F4B353124C3A59900F2497B /* multiplicationLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B352D24C3A59900F2497B /* multiplicationLevels.json */; };
-		6F4B353224C3A59900F2497B /* additionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B352E24C3A59900F2497B /* additionLevels.json */; };
 		6F4B353324C3A59900F2497B /* subtractionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B352F24C3A59900F2497B /* subtractionLevels.json */; };
 		6F4B353424C3A59900F2497B /* divisionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B353024C3A59900F2497B /* divisionLevels.json */; };
 		6F549AA824BB66DB003B5A1D /* BetweenLevels.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */; };
@@ -30,6 +29,7 @@
 		6FF1CFCC24C3716B0004034A /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1CFCB24C3716B0004034A /* IntroScene.swift */; };
 		6FF1CFD424C395870004034A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1CFD224C395870004034A /* Assets.xcassets */; };
 		6FF1CFD624C396780004034A /* IntroScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1CFD524C396780004034A /* IntroScene.sks */; };
+		6FF2CE9824C4A89A000629F8 /* additionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FF2CE9724C4A89A000629F8 /* additionLevels.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		6F4B352D24C3A59900F2497B /* multiplicationLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = multiplicationLevels.json; sourceTree = "<group>"; };
-		6F4B352E24C3A59900F2497B /* additionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = additionLevels.json; sourceTree = "<group>"; };
 		6F4B352F24C3A59900F2497B /* subtractionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subtractionLevels.json; sourceTree = "<group>"; };
 		6F4B353024C3A59900F2497B /* divisionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = divisionLevels.json; sourceTree = "<group>"; };
 		6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BetweenLevels.sks; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		6FF1CFCB24C3716B0004034A /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScene.swift; sourceTree = "<group>"; };
 		6FF1CFD224C395870004034A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FF1CFD524C396780004034A /* IntroScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = IntroScene.sks; sourceTree = "<group>"; };
+		6FF2CE9724C4A89A000629F8 /* additionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = additionLevels.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,12 +141,12 @@
 				6F549AA924BB671C003B5A1D /* BetweenLevels.swift */,
 				6F7CBDC724BA28F4001F8612 /* MathLevel.swift */,
 				6FA1F71024A7BB800095DF7E /* GameViewController.swift */,
-				6F4B352E24C3A59900F2497B /* additionLevels.json */,
 				6F4B353024C3A59900F2497B /* divisionLevels.json */,
 				6F4B352D24C3A59900F2497B /* multiplicationLevels.json */,
 				6F4B352F24C3A59900F2497B /* subtractionLevels.json */,
 				6FA1F71224A7BB800095DF7E /* Main.storyboard */,
 				6FA1F71524A7BB800095DF7E /* Assets.xcassets */,
+				6FF2CE9724C4A89A000629F8 /* additionLevels.json */,
 				6FA1F71724A7BB800095DF7E /* LaunchScreen.storyboard */,
 				6FA1F71A24A7BB800095DF7E /* Info.plist */,
 				6F7CBDC324B9127D001F8612 /* levels.json */,
@@ -281,13 +281,13 @@
 				6FA1F70B24A7BB800095DF7E /* GameScene.sks in Resources */,
 				6F4B353324C3A59900F2497B /* subtractionLevels.json in Resources */,
 				6F4B353424C3A59900F2497B /* divisionLevels.json in Resources */,
-				6F4B353224C3A59900F2497B /* additionLevels.json in Resources */,
 				6FA1F71624A7BB800095DF7E /* Assets.xcassets in Resources */,
 				6F7CBDC424B9127D001F8612 /* levels.json in Resources */,
 				6F549AA824BB66DB003B5A1D /* BetweenLevels.sks in Resources */,
 				6F4B353124C3A59900F2497B /* multiplicationLevels.json in Resources */,
 				6FF1CFD424C395870004034A /* Assets.xcassets in Resources */,
 				6FA1F71924A7BB800095DF7E /* LaunchScreen.storyboard in Resources */,
+				6FF2CE9824C4A89A000629F8 /* additionLevels.json in Resources */,
 				6FF1CFD624C396780004034A /* IntroScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

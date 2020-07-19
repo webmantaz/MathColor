@@ -61,9 +61,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let defaults = UserDefaults.standard
         levelNumber = defaults.integer(forKey: "CurrentLevel")
-        print(levelNumber)
         let l = MathLevel()
-        l.getLevel(number: levelNumber)
+        l.getLevel(number: levelNumber, levelOperator: OperatorSymbols.multiplication)
         defaults.set(l.levelNumber, forKey: "CurrentLevel")
 
         levelName = l.levelName

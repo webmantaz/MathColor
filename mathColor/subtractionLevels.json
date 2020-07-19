@@ -55,7 +55,7 @@
         "minToPass":5,
         "timeToFall":8,
         "numbersToUse":[10,11,12],
-        "operators":["M"],
+        "operators":["S"],
         "backgroundColor":"blue",
         "digitImageSet":"Default",
         "missedImagePrefix":"missed",

@@ -26,8 +26,8 @@ class MathLevel {
     var soundtrack : String
     var multiplicationLevels: [Level]
     var divisionLevels : [Level]
-    var additionLevels = [Level]
-    var subtractionLevels = [Level]
+    var additionLevels : [Level]
+    var subtractionLevels : [Level]
 
     
     init() {
@@ -46,11 +46,15 @@ class MathLevel {
         self.correctSoundPrefix = ""
         self.soundtrack = ""
         self.multiplicationLevels = Bundle.main.decode([Level].self, from: "multiplicationLevels.json")
+        self.divisionLevels = Bundle.main.decode([Level].self, from: "divisionLevels.json")
+        self.additionLevels = Bundle.main.decode([Level].self, from: "additionLevels.json")
+        self.subtractionLevels = Bundle.main.decode([Level].self, from: "subtractionLevels.json")
+        
         
         
     }
     
-    func getLevel(number:Int)
+    func getLevel(number:Int,levelOperator:OperatorSymbols)
     {
         var tmpNumber = number
         if number == 0
@@ -59,7 +63,18 @@ class MathLevel {
         } else {
             tmpNumber = number
         }
-        let level = levels[tmpNumber-1]
+        var level = additionLevels[tmpNumber-1]
+                
+        switch levelOperator {
+        case OperatorSymbols.addition:
+            level = additionLevels[tmpNumber-1]
+        case OperatorSymbols.subtraction:
+            level = subtractionLevels[tmpNumber-1]
+        case OperatorSymbols.multiplication:
+            level = multiplicationLevels[tmpNumber-1]
+        case OperatorSymbols.division:
+            level = divisionLevels[tmpNumber-1]
+        }
                 
         self.levelName = level.levelName
         self.levelNumber = level.levelNumber

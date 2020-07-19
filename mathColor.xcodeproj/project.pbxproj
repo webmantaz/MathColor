@@ -13,7 +13,6 @@
 		6F549AA824BB66DB003B5A1D /* BetweenLevels.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */; };
 		6F549AAA24BB671C003B5A1D /* BetweenLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F549AA924BB671C003B5A1D /* BetweenLevels.swift */; };
 		6F7CBDC224B90AB0001F8612 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC124B90AB0001F8612 /* Level.swift */; };
-		6F7CBDC424B9127D001F8612 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC324B9127D001F8612 /* levels.json */; };
 		6F7CBDC624BA0945001F8612 /* Bundle-Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */; };
 		6F7CBDC824BA28F4001F8612 /* MathLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC724BA28F4001F8612 /* MathLevel.swift */; };
 		6FA1F70924A7BB800095DF7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1F70824A7BB800095DF7E /* AppDelegate.swift */; };
@@ -56,7 +55,6 @@
 		6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BetweenLevels.sks; sourceTree = "<group>"; };
 		6F549AA924BB671C003B5A1D /* BetweenLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenLevels.swift; sourceTree = "<group>"; };
 		6F7CBDC124B90AB0001F8612 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
-		6F7CBDC324B9127D001F8612 /* levels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = levels.json; sourceTree = "<group>"; };
 		6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decoding.swift"; sourceTree = "<group>"; };
 		6F7CBDC724BA28F4001F8612 /* MathLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLevel.swift; sourceTree = "<group>"; };
 		6FA1F70524A7BB800095DF7E /* mathColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mathColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +104,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F0DDECE24C4FB53008AE940 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				6FF2CE9724C4A89A000629F8 /* additionLevels.json */,
+				6F4B353024C3A59900F2497B /* divisionLevels.json */,
+				6F4B352D24C3A59900F2497B /* multiplicationLevels.json */,
+				6F4B352F24C3A59900F2497B /* subtractionLevels.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		6F0DDECF24C4FBC5008AE940 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */,
+				6F7CBDC724BA28F4001F8612 /* MathLevel.swift */,
+				6F7CBDC124B90AB0001F8612 /* Level.swift */,
+				6FDE938A24A959F20031FF31 /* OperatorString.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		6F0DDED024C4FC58008AE940 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6FA1F70A24A7BB800095DF7E /* GameScene.sks */,
+				6FA1F70E24A7BB800095DF7E /* GameScene.swift */,
+				6FF1CFCB24C3716B0004034A /* IntroScene.swift */,
+				6FF1CFD524C396780004034A /* IntroScene.sks */,
+				6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */,
+				6F549AA924BB671C003B5A1D /* BetweenLevels.swift */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
 		6FA1F6FC24A7BB7F0095DF7E = {
 			isa = PBXGroup;
 			children = (
@@ -131,26 +164,14 @@
 			isa = PBXGroup;
 			children = (
 				6FA1F70824A7BB800095DF7E /* AppDelegate.swift */,
-				6F7CBDC124B90AB0001F8612 /* Level.swift */,
-				6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */,
-				6FA1F70A24A7BB800095DF7E /* GameScene.sks */,
-				6FA1F70E24A7BB800095DF7E /* GameScene.swift */,
-				6FF1CFCB24C3716B0004034A /* IntroScene.swift */,
-				6FF1CFD524C396780004034A /* IntroScene.sks */,
-				6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */,
-				6F549AA924BB671C003B5A1D /* BetweenLevels.swift */,
-				6F7CBDC724BA28F4001F8612 /* MathLevel.swift */,
 				6FA1F71024A7BB800095DF7E /* GameViewController.swift */,
-				6F4B353024C3A59900F2497B /* divisionLevels.json */,
-				6F4B352D24C3A59900F2497B /* multiplicationLevels.json */,
-				6F4B352F24C3A59900F2497B /* subtractionLevels.json */,
+				6F0DDED024C4FC58008AE940 /* scenes */,
+				6F0DDECF24C4FBC5008AE940 /* classes */,
+				6F0DDECE24C4FB53008AE940 /* json */,
 				6FA1F71224A7BB800095DF7E /* Main.storyboard */,
 				6FA1F71524A7BB800095DF7E /* Assets.xcassets */,
-				6FF2CE9724C4A89A000629F8 /* additionLevels.json */,
 				6FA1F71724A7BB800095DF7E /* LaunchScreen.storyboard */,
 				6FA1F71A24A7BB800095DF7E /* Info.plist */,
-				6F7CBDC324B9127D001F8612 /* levels.json */,
-				6FDE938A24A959F20031FF31 /* OperatorString.swift */,
 			);
 			path = mathColor;
 			sourceTree = "<group>";
@@ -282,7 +303,6 @@
 				6F4B353324C3A59900F2497B /* subtractionLevels.json in Resources */,
 				6F4B353424C3A59900F2497B /* divisionLevels.json in Resources */,
 				6FA1F71624A7BB800095DF7E /* Assets.xcassets in Resources */,
-				6F7CBDC424B9127D001F8612 /* levels.json in Resources */,
 				6F549AA824BB66DB003B5A1D /* BetweenLevels.sks in Resources */,
 				6F4B353124C3A59900F2497B /* multiplicationLevels.json in Resources */,
 				6FF1CFD424C395870004034A /* Assets.xcassets in Resources */,

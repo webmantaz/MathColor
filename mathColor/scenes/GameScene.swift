@@ -57,12 +57,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
     override func didMove(to view: SKView) {
         
+        var symbol : OperatorSymbols
+        
         physicsWorld.contactDelegate = self
         
         let defaults = UserDefaults.standard
         levelNumber = defaults.integer(forKey: "CurrentLevel")
+        let levelOperator = defaults.string(forKey: "Operator")
         let l = MathLevel()
-        l.getLevel(number: levelNumber, levelOperator: OperatorSymbols.multiplication)
+        switch levelOperator {
+        case "A":
+            symbol = OperatorSymbols.addition
+        case "M":
+            symbol = OperatorSymbols.multiplication
+        case "S":
+            symbol = OperatorSymbols.subtraction
+        case "D":
+            symbol = OperatorSymbols.division
+        default:
+            symbol = OperatorSymbols.addition
+        }
+        l.getLevel(number: levelNumber, levelOperator: symbol)
         defaults.set(l.levelNumber, forKey: "CurrentLevel")
 
         levelName = l.levelName

@@ -108,7 +108,7 @@ class IntroScene : SKScene
     
     func changeScene()
     {
-        let scene = GameScene(fileNamed: "GameScene")!
+        let scene = SceneIntro(fileNamed: "SceneIntro")!
         scene.scaleMode = .aspectFill
         let transition = SKTransition.moveIn(with: .right, duration: 1)
         self.view?.presentScene(scene, transition: transition)

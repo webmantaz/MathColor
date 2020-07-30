@@ -41,25 +41,25 @@ class SceneIntro : SKScene
         let levelNameNode = SKLabelNode()
         levelNameNode.fontColor = UIColor.black
         levelNameNode.fontSize = 96
-        levelNameNode.position = CGPoint(x: frame.midX, y: frame.midY)
+        levelNameNode.position = CGPoint(x: frame.midX, y: frame.midY+400)
         levelNameNode.text = levelName
         self.addChild(levelNameNode)
         
         let levelChancesNode = SKLabelNode()
         levelChancesNode.fontColor = UIColor.black
         levelChancesNode.fontSize = 96
-        levelChancesNode.position = CGPoint(x: frame.midX, y: frame.midY-200)
+        levelChancesNode.position = CGPoint(x: frame.midX, y: frame.midY+200)
         levelChancesNode.text = String(levelChances)
         self.addChild(levelChancesNode)
         
         let levelMinNode = SKLabelNode()
         levelMinNode.fontColor = UIColor.black
         levelMinNode.fontSize = 96
-        levelMinNode.position = CGPoint(x: frame.midX, y: frame.midY-400)
-        levelMinNode.text = String(levelMinToPass)
+        levelMinNode.position = CGPoint(x: frame.midX, y: frame.midY)
+        levelMinNode.text = String(levelMinToPass) + " "
         self.addChild(levelMinNode)
         
-        let startRect = CGRect(x: frame.midX, y: frame.midY-600, width: 300, height: 100)
+        let startRect = CGRect(x: frame.midX-150, y: frame.midY-200, width: 300, height: 100)
         let startNode = SKShapeNode(rect: startRect)
         startNode.fillColor = UIColor.black
         startNode.name = "start"

@@ -19,28 +19,29 @@ class IntroScene : SKScene
         titleNode.fontSize = 96
         titleNode.zPosition = 10
         titleNode.fontColor = UIColor.black
-        titleNode.position = CGPoint(x: frame.midX, y: frame.midY)
+        titleNode.position = CGPoint(x: frame.midX+20, y: frame.midY+50)
         titleNode.text = "Wizard Math"
         self.addChild(titleNode)
     
         let additionButtonNode = SKSpriteNode(imageNamed: "addition.png")
         additionButtonNode.name = "addition"
-        additionButtonNode.position = CGPoint(x: frame.minX+150, y: frame.midY-100)
+        additionButtonNode.position = CGPoint(x: frame.minX+300
+            , y: frame.midY-100)
         self.addChild(additionButtonNode)
         
         let multiplicationButtonNode = SKSpriteNode(imageNamed: "multiply.png")
         multiplicationButtonNode.name = "multiplication"
-        multiplicationButtonNode.position = CGPoint(x: frame.minX+300, y: frame.midY-100)
+        multiplicationButtonNode.position = CGPoint(x: frame.minX+475, y: frame.midY-100)
         self.addChild(multiplicationButtonNode)
         
         let dividedButtonNode = SKSpriteNode(imageNamed: "dividedby.png")
         dividedButtonNode.name = "division"
-        dividedButtonNode.position = CGPoint(x: frame.minX+450, y: frame.midY-100)
+        dividedButtonNode.position = CGPoint(x: frame.minX+650, y: frame.midY-100)
         self.addChild(dividedButtonNode)
         
         let subtractButtonNode = SKSpriteNode(imageNamed: "subtraction.png")
         subtractButtonNode.name = "subtraction"
-        subtractButtonNode.position = CGPoint(x: frame.minX+575, y: frame.midY-100)
+        subtractButtonNode.position = CGPoint(x: frame.minX+825, y: frame.midY-100)
         self.addChild(subtractButtonNode)
         
         let button = CGRect(x: frame.midX-150, y: frame.midY-300, width: 300, height: 100)
@@ -59,8 +60,29 @@ class IntroScene : SKScene
             continueNode.isHidden = false
         }
         
+        if let purpleFire = SKEmitterNode(fileNamed: "PurpleFire") {
+            purpleFire.position = multiplicationButtonNode.position
+            purpleFire.zPosition = -1
+            addChild(purpleFire)
+        }
         
+        if let redFire = SKEmitterNode(fileNamed: "RedFire") {
+            redFire.position = additionButtonNode.position
+            redFire.zPosition = -1
+            addChild(redFire )
+        }
         
+        if let blueFire = SKEmitterNode(fileNamed: "BlueFire") {
+            blueFire.position = subtractButtonNode.position
+            blueFire.zPosition = -1
+            addChild(blueFire )
+        }
+        
+        if let yellowFire = SKEmitterNode(fileNamed: "YellowFire") {
+            yellowFire.position = dividedButtonNode.position
+            yellowFire.zPosition = -1
+            addChild(yellowFire)
+        }
         
          
     }

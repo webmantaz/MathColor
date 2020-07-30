@@ -13,6 +13,12 @@
 		6F4B353424C3A59900F2497B /* divisionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B353024C3A59900F2497B /* divisionLevels.json */; };
 		6F549AA824BB66DB003B5A1D /* BetweenLevels.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */; };
 		6F549AAA24BB671C003B5A1D /* BetweenLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F549AA924BB671C003B5A1D /* BetweenLevels.swift */; };
+		6F608B7424D228B80084D128 /* PurpleFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7224D228B80084D128 /* PurpleFire.sks */; };
+		6F608B7524D228B80084D128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7324D228B80084D128 /* Assets.xcassets */; };
+		6F608B7724D238320084D128 /* RedFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7624D238320084D128 /* RedFire.sks */; };
+		6F608B7924D242A20084D128 /* BlueFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7824D242A20084D128 /* BlueFire.sks */; };
+		6F608B7B24D244FD0084D128 /* YellowFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7A24D244FD0084D128 /* YellowFire.sks */; };
+		6F608B7D24D249AF0084D128 /* BoomFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7C24D249AF0084D128 /* BoomFire.sks */; };
 		6F7CBDC224B90AB0001F8612 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC124B90AB0001F8612 /* Level.swift */; };
 		6F7CBDC624BA0945001F8612 /* Bundle-Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */; };
 		6F7CBDC824BA28F4001F8612 /* MathLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC724BA28F4001F8612 /* MathLevel.swift */; };
@@ -28,7 +34,6 @@
 		6FA1F72F24A7BB810095DF7E /* mathColorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1F72E24A7BB810095DF7E /* mathColorUITests.swift */; };
 		6FDE938B24A959F20031FF31 /* OperatorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDE938A24A959F20031FF31 /* OperatorString.swift */; };
 		6FF1CFCC24C3716B0004034A /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1CFCB24C3716B0004034A /* IntroScene.swift */; };
-		6FF1CFD424C395870004034A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1CFD224C395870004034A /* Assets.xcassets */; };
 		6FF1CFD624C396780004034A /* IntroScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1CFD524C396780004034A /* IntroScene.sks */; };
 		6FF2CE9824C4A89A000629F8 /* additionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FF2CE9724C4A89A000629F8 /* additionLevels.json */; };
 /* End PBXBuildFile section */
@@ -57,6 +62,12 @@
 		6F4B353024C3A59900F2497B /* divisionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = divisionLevels.json; sourceTree = "<group>"; };
 		6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BetweenLevels.sks; sourceTree = "<group>"; };
 		6F549AA924BB671C003B5A1D /* BetweenLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenLevels.swift; sourceTree = "<group>"; };
+		6F608B7224D228B80084D128 /* PurpleFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PurpleFire.sks; sourceTree = "<group>"; };
+		6F608B7324D228B80084D128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F608B7624D238320084D128 /* RedFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedFire.sks; sourceTree = "<group>"; };
+		6F608B7824D242A20084D128 /* BlueFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlueFire.sks; sourceTree = "<group>"; };
+		6F608B7A24D244FD0084D128 /* YellowFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = YellowFire.sks; sourceTree = "<group>"; };
+		6F608B7C24D249AF0084D128 /* BoomFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BoomFire.sks; sourceTree = "<group>"; };
 		6F7CBDC124B90AB0001F8612 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decoding.swift"; sourceTree = "<group>"; };
 		6F7CBDC724BA28F4001F8612 /* MathLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLevel.swift; sourceTree = "<group>"; };
@@ -78,7 +89,6 @@
 		6FA1F73024A7BB810095DF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FDE938A24A959F20031FF31 /* OperatorString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorString.swift; sourceTree = "<group>"; };
 		6FF1CFCB24C3716B0004034A /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScene.swift; sourceTree = "<group>"; };
-		6FF1CFD224C395870004034A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FF1CFD524C396780004034A /* IntroScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = IntroScene.sks; sourceTree = "<group>"; };
 		6FF2CE9724C4A89A000629F8 /* additionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = additionLevels.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +158,12 @@
 		6FA1F6FC24A7BB7F0095DF7E = {
 			isa = PBXGroup;
 			children = (
-				6FF1CFD224C395870004034A /* Assets.xcassets */,
+				6F608B7C24D249AF0084D128 /* BoomFire.sks */,
+				6F608B7A24D244FD0084D128 /* YellowFire.sks */,
+				6F608B7824D242A20084D128 /* BlueFire.sks */,
+				6F608B7624D238320084D128 /* RedFire.sks */,
+				6F608B7224D228B80084D128 /* PurpleFire.sks */,
+				6F608B7324D228B80084D128 /* Assets.xcassets */,
 				6FA1F70724A7BB800095DF7E /* mathColor */,
 				6FA1F72224A7BB810095DF7E /* mathColorTests */,
 				6FA1F72D24A7BB810095DF7E /* mathColorUITests */,
@@ -309,13 +324,18 @@
 				6F4B353324C3A59900F2497B /* subtractionLevels.json in Resources */,
 				6F9E1A4D24C7CCA7001C96D0 /* SceneIntro.sks in Resources */,
 				6F4B353424C3A59900F2497B /* divisionLevels.json in Resources */,
+				6F608B7724D238320084D128 /* RedFire.sks in Resources */,
+				6F608B7D24D249AF0084D128 /* BoomFire.sks in Resources */,
 				6FA1F71624A7BB800095DF7E /* Assets.xcassets in Resources */,
+				6F608B7524D228B80084D128 /* Assets.xcassets in Resources */,
 				6F549AA824BB66DB003B5A1D /* BetweenLevels.sks in Resources */,
+				6F608B7424D228B80084D128 /* PurpleFire.sks in Resources */,
 				6F4B353124C3A59900F2497B /* multiplicationLevels.json in Resources */,
-				6FF1CFD424C395870004034A /* Assets.xcassets in Resources */,
 				6FA1F71924A7BB800095DF7E /* LaunchScreen.storyboard in Resources */,
 				6FF2CE9824C4A89A000629F8 /* additionLevels.json in Resources */,
+				6F608B7924D242A20084D128 /* BlueFire.sks in Resources */,
 				6FF1CFD624C396780004034A /* IntroScene.sks in Resources */,
+				6F608B7B24D244FD0084D128 /* YellowFire.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MD467F482;
 				INFOPLIST_FILE = mathColor/Info.plist;
@@ -529,8 +550,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WallaceFamily.mathColor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallacefamily.MathColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,15 +562,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7MD467F482;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = mathColor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WallaceFamily.mathColor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallacefamily.MathColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

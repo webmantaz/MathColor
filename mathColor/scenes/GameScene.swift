@@ -126,12 +126,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         missedLabel.position = CGPoint(x: frame.minX + 200, y: frame.maxY-150)
         self.addChild(missedLabel)
         
-        let levelNameNode = SKLabelNode()
-        levelNameNode.text = levelName
-        levelNameNode.fontColor = UIColor.blue
-        levelNameNode.fontSize = 96
-        levelNameNode.position = CGPoint(x: frame.midX, y: frame.maxY-250)
-        self.addChild(levelNameNode)
+        let hat = SKSpriteNode(imageNamed: "magicianHat")
+        let hats = [hat, hat, hat]
+        for node in hats{
+            
+        }
+        
+        
     }
     
    
@@ -360,12 +361,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if nodeB.name == "barrier"
         {
+            
+            if let boomFire = SKEmitterNode(fileNamed: "BoomFire") {
+                boomFire.position = nodeA.position
+                boomFire.zPosition = -1
+                addChild(boomFire)
+            }
             nodeA.removeFromParent()
             respawn = true
             missed += 1
             keypadLabel.text = ""
             kpLabel = ""
-            middleAlert(imageName: "wrong_big.png")
+            
+            // middleAlert(imageName: "wrong_big.png")
         }
     }
     

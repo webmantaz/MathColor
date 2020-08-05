@@ -53,6 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var attempts = 0
     var levelPassed = false
+    var hats = 3
     
             
     override func didMove(to view: SKView) {
@@ -120,22 +121,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.position = CGPoint(x: frame.maxX - 200, y: frame.maxY-150)
         scoreLabel.fontSize = 96
         self.addChild(scoreLabel)
+        let scoreImageNode = SKSpriteNode(imageNamed: "correct_small")
+        scoreImageNode.position = CGPoint(x: scoreLabel.position.x, y: scoreLabel.position.y-70)
+        self.addChild(scoreImageNode)
         missedLabel.text = "0"
         missedLabel.fontColor = UIColor.blue
         missedLabel.fontSize = 96
         missedLabel.position = CGPoint(x: frame.minX + 200, y: frame.maxY-150)
         self.addChild(missedLabel)
+        let misseImagheNode = SKSpriteNode(imageNamed: "wrong_small")
+        misseImagheNode.position = CGPoint(x: missedLabel.position.x, y: missedLabel.position.y-70)
+        self.addChild(misseImagheNode)
         
-        let hat = SKSpriteNode(imageNamed: "magicianHat")
-        let hats = [hat, hat, hat]
-        for node in hats{
             
-        }
-        
         
     }
-    
-   
     
     func CGPointDistanceSquared(from: CGPoint, to: CGPoint) -> CGFloat {
         return (from.x - to.x) * (from.x - to.x) + (from.y - to.y) * (from.y - to.y)
@@ -196,9 +196,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     {
                         keypadLabel.text = ""
                         kpLabel = ""
+                        if let sparkle = SKEmitterNode(fileNamed: "Sparkle") {
+                            sparkle.position = mathQuestion.position
+                            sparkle.name = "sparkle"
+                            self.addChild(sparkle)
+                        }
                         mathQuestion.removeFromParent()
                         respawn = true
-                        middleAlert(imageName: "correct_big.png")
+                        // middleAlert(imageName: "correct_big.png")
                     } else {
                         keypadLabel.text = kpLabel
                         middleAlert(imageName: "wrong_big.png")

@@ -63,24 +63,28 @@ class IntroScene : SKScene
         if let purpleFire = SKEmitterNode(fileNamed: "PurpleFire") {
             purpleFire.position = multiplicationButtonNode.position
             purpleFire.zPosition = -1
+            purpleFire.name = "fire"
             addChild(purpleFire)
         }
         
         if let redFire = SKEmitterNode(fileNamed: "RedFire") {
             redFire.position = additionButtonNode.position
             redFire.zPosition = -1
-            addChild(redFire )
+            redFire.name = "fire"
+            addChild(redFire)
         }
         
         if let blueFire = SKEmitterNode(fileNamed: "BlueFire") {
             blueFire.position = subtractButtonNode.position
             blueFire.zPosition = -1
+            blueFire.name = "fire"
             addChild(blueFire )
         }
         
         if let yellowFire = SKEmitterNode(fileNamed: "YellowFire") {
             yellowFire.position = dividedButtonNode.position
             yellowFire.zPosition = -1
+            yellowFire.name = "fire"
             addChild(yellowFire)
         }
         

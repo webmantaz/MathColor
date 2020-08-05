@@ -13,6 +13,7 @@
 		6F4B353424C3A59900F2497B /* divisionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B353024C3A59900F2497B /* divisionLevels.json */; };
 		6F549AA824BB66DB003B5A1D /* BetweenLevels.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */; };
 		6F549AAA24BB671C003B5A1D /* BetweenLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F549AA924BB671C003B5A1D /* BetweenLevels.swift */; };
+		6F56BF7824D4CE4600CD0D62 /* Sparkle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F56BF7724D4CE4600CD0D62 /* Sparkle.sks */; };
 		6F608B7424D228B80084D128 /* PurpleFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7224D228B80084D128 /* PurpleFire.sks */; };
 		6F608B7524D228B80084D128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7324D228B80084D128 /* Assets.xcassets */; };
 		6F608B7724D238320084D128 /* RedFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7624D238320084D128 /* RedFire.sks */; };
@@ -62,6 +63,7 @@
 		6F4B353024C3A59900F2497B /* divisionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = divisionLevels.json; sourceTree = "<group>"; };
 		6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BetweenLevels.sks; sourceTree = "<group>"; };
 		6F549AA924BB671C003B5A1D /* BetweenLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenLevels.swift; sourceTree = "<group>"; };
+		6F56BF7724D4CE4600CD0D62 /* Sparkle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Sparkle.sks; sourceTree = "<group>"; };
 		6F608B7224D228B80084D128 /* PurpleFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PurpleFire.sks; sourceTree = "<group>"; };
 		6F608B7324D228B80084D128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F608B7624D238320084D128 /* RedFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedFire.sks; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		6FA1F6FC24A7BB7F0095DF7E = {
 			isa = PBXGroup;
 			children = (
+				6F56BF7724D4CE4600CD0D62 /* Sparkle.sks */,
 				6F608B7C24D249AF0084D128 /* BoomFire.sks */,
 				6F608B7A24D244FD0084D128 /* YellowFire.sks */,
 				6F608B7824D242A20084D128 /* BlueFire.sks */,
@@ -319,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F56BF7824D4CE4600CD0D62 /* Sparkle.sks in Resources */,
 				6FA1F71424A7BB800095DF7E /* Main.storyboard in Resources */,
 				6FA1F70B24A7BB800095DF7E /* GameScene.sks in Resources */,
 				6F4B353324C3A59900F2497B /* subtractionLevels.json in Resources */,

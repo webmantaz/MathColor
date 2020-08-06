@@ -55,7 +55,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var levelPassed = false
     var hats = 3
     
-            
+    var triesYPosition = CGFloat()
+    var triesNode = SKNode()
+    
+    
+    
+    
     override func didMove(to view: SKView) {
         
         var symbol : OperatorSymbols
@@ -133,8 +138,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         misseImagheNode.position = CGPoint(x: missedLabel.position.x, y: missedLabel.position.y-70)
         self.addChild(misseImagheNode)
         
-            
-        
+        redrawLives(yPosition: scoreImageNode.position.y)
+        triesYPosition = scoreImageNode.position.y
     }
     
     func CGPointDistanceSquared(from: CGPoint, to: CGPoint) -> CGFloat {
@@ -206,8 +211,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         // middleAlert(imageName: "correct_big.png")
                     } else {
                         keypadLabel.text = kpLabel
-                        middleAlert(imageName: "wrong_big.png")
-                    }
+                        redrawLives(yPosition: triesYPosition)                    }
                 case "backspace":
                     kpValue = editKeyPad(keyPressed: "backspace", event: kpEvent.backspace)
                     keypadLabel.text = kpLabel
@@ -271,8 +275,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if kpValue == result
         {
             score += 1
+            hats=3
+            redrawLives(yPosition: triesYPosition)
             return true
         } else {
+            if hats-1 == 0
+            {
+                if let boomFire = SKEmitterNode(fileNamed: "BoomFire") {
+                               boomFire.position = mathQuestion.position
+                               boomFire.zPosition = -1
+                               addChild(boomFire)
+                           }
+                           mathQuestion.removeFromParent()
+                           respawn = true
+                           missed += 1
+                           keypadLabel.text = ""
+                           kpLabel = ""
+                           hats=3
+            } else {
+                hats -= 1
+            }
             return false
         }
     }
@@ -377,9 +399,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             missed += 1
             keypadLabel.text = ""
             kpLabel = ""
+            hats = 3
+            redrawLives(yPosition: triesYPosition)
             
             // middleAlert(imageName: "wrong_big.png")
         }
+    }
+    
+    func redrawLives(yPosition : CGFloat)
+    {
+        triesNode.removeFromParent()
+        let tries = Tries(tries: hats, image: "magicianHat")
+        triesNode = tries.buildNode()
+        triesNode.position = CGPoint(x: frame.midX-80, y: yPosition)
+        self.addChild(triesNode)
     }
     
     func changeScene()

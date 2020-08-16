@@ -1,8 +1,8 @@
 //
-//  OperatorString.swift
+//  MathQuestionNode.swift
 //  mathColor
 //
-//  Created by James Wallace on 6/27/20.
+//  Created by James Wallace on 8/15/20.
 //  Copyright © 2020 James Wallace. All rights reserved.
 //
 
@@ -16,22 +16,33 @@ enum OperatorSymbols : String {
     case multiplication = "multiply.png"
 }
 
-class OperatorString
+class MathQuestionNode : SKNode
 {
     var firstNumber = 0
     var secondNumber = 0
     var operatorName : OperatorSymbols
     
-    init() {
+    init(firstNumber: Int, secondNumber: Int, Operator: OperatorSymbols) {
+        self.firstNumber = firstNumber
+        self.secondNumber = secondNumber
+        self.operatorName = Operator
+        super.init()
+        buildNode()
+    }
+    
+    override init() {
         firstNumber = 0
         secondNumber = 0
         operatorName = OperatorSymbols.addition
+        super.init()
     }
-      
-    func buildNode() -> SKNode
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("We aren't using storyboards")
+    }
+    
+    func buildNode()
     {
-        let factQuestion : SKNode
-        factQuestion = SKNode()
         var arrFirstNumber = [SKSpriteNode]()
         var arrSecondNumber = [SKSpriteNode]()
         let arrFn = digits(firstNumber)
@@ -40,7 +51,7 @@ class OperatorString
         let operandImageName = getOperandImageName(operand: operatorName)
         let operandNode = SKSpriteNode(imageNamed: operandImageName)
         let operandPosition = operandNode.position
-        factQuestion.addChild(operandNode)
+        self.addChild(operandNode)
         var pos = CGPoint()
         let digitsInFirstNumber = arrFn.count
         for number in arrFn {
@@ -50,7 +61,7 @@ class OperatorString
             pos.x = operandPosition.x - CGFloat((70*(digitsInFirstNumber-numberOfDigitsFirstNumber)))
             pos.y = operandPosition.y
             arrFirstNumber[numberOfDigitsFirstNumber].position = pos
-            factQuestion.addChild(arrFirstNumber[numberOfDigitsFirstNumber])
+            self.addChild(arrFirstNumber[numberOfDigitsFirstNumber])
             numberOfDigitsFirstNumber += 1
         }
         let arrSn = digits(secondNumber)
@@ -60,10 +71,9 @@ class OperatorString
             pos.x = operandPosition.x + CGFloat((70*(numberOfDigitsSecondNumber+1)))
             pos.y = operandPosition.y
             arrSecondNumber[numberOfDigitsSecondNumber].position = pos
-            factQuestion.addChild(arrSecondNumber[numberOfDigitsSecondNumber])
+            self.addChild(arrSecondNumber[numberOfDigitsSecondNumber])
             numberOfDigitsSecondNumber += 1
         }
-        return factQuestion
     }
 
     func digits(number : Int) -> [Int] {
@@ -76,7 +86,7 @@ class OperatorString
         return digits
     }
     
-    func getOperandImageName(operand : OperatorSymbols) -> String
+    private func getOperandImageName(operand : OperatorSymbols) -> String
     {
         var imageName = ""
         switch operand {
@@ -94,7 +104,7 @@ class OperatorString
         return imageName
     }
     
-    func digits(_ number: Int) -> [Int] {
+    private func digits(_ number: Int) -> [Int] {
         var number = number
         var digits: [Int] = []
         while number > 0 {
@@ -104,7 +114,7 @@ class OperatorString
         return digits
     }
     
-    func calculateResult() -> Int
+    public func calculateResult() -> Int
     {
         var result = 0
         
@@ -120,7 +130,5 @@ class OperatorString
         }
     return result
     }
-    
-    
 }
 

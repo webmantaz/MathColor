@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F070D9724DB59B500411E79 /* Tries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F070D9624DB59B500411E79 /* Tries.swift */; };
 		6F1357C724C653AF00A63BB6 /* SceneIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1357C624C653AF00A63BB6 /* SceneIntro.swift */; };
 		6F4B353124C3A59900F2497B /* multiplicationLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B352D24C3A59900F2497B /* multiplicationLevels.json */; };
 		6F4B353324C3A59900F2497B /* subtractionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B352F24C3A59900F2497B /* subtractionLevels.json */; };
@@ -21,9 +20,11 @@
 		6F608B7924D242A20084D128 /* BlueFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7824D242A20084D128 /* BlueFire.sks */; };
 		6F608B7B24D244FD0084D128 /* YellowFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7A24D244FD0084D128 /* YellowFire.sks */; };
 		6F608B7D24D249AF0084D128 /* BoomFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F608B7C24D249AF0084D128 /* BoomFire.sks */; };
+		6F70A5A424E8440B0087A8D9 /* MultiImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F70A5A324E8440B0087A8D9 /* MultiImageNode.swift */; };
 		6F7CBDC224B90AB0001F8612 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC124B90AB0001F8612 /* Level.swift */; };
 		6F7CBDC624BA0945001F8612 /* Bundle-Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */; };
 		6F7CBDC824BA28F4001F8612 /* MathLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CBDC724BA28F4001F8612 /* MathLevel.swift */; };
+		6F80BC9724E8A3E8001B0975 /* MathNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F80BC9624E8A3E8001B0975 /* MathNumbers.swift */; };
 		6F9E1A4D24C7CCA7001C96D0 /* SceneIntro.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6F9E1A4C24C7CCA7001C96D0 /* SceneIntro.sks */; };
 		6FA1F70924A7BB800095DF7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1F70824A7BB800095DF7E /* AppDelegate.swift */; };
 		6FA1F70B24A7BB800095DF7E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1F70A24A7BB800095DF7E /* GameScene.sks */; };
@@ -34,7 +35,7 @@
 		6FA1F71924A7BB800095DF7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1F71724A7BB800095DF7E /* LaunchScreen.storyboard */; };
 		6FA1F72424A7BB810095DF7E /* mathColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1F72324A7BB810095DF7E /* mathColorTests.swift */; };
 		6FA1F72F24A7BB810095DF7E /* mathColorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1F72E24A7BB810095DF7E /* mathColorUITests.swift */; };
-		6FDE938B24A959F20031FF31 /* OperatorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDE938A24A959F20031FF31 /* OperatorString.swift */; };
+		6FD9F6A424E82214006A12C0 /* MathQuestionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9F6A324E82214006A12C0 /* MathQuestionNode.swift */; };
 		6FF1CFCC24C3716B0004034A /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1CFCB24C3716B0004034A /* IntroScene.swift */; };
 		6FF1CFD624C396780004034A /* IntroScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1CFD524C396780004034A /* IntroScene.sks */; };
 		6FF2CE9824C4A89A000629F8 /* additionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FF2CE9724C4A89A000629F8 /* additionLevels.json */; };
@@ -58,7 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6F070D9624DB59B500411E79 /* Tries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tries.swift; sourceTree = "<group>"; };
 		6F1357C624C653AF00A63BB6 /* SceneIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneIntro.swift; sourceTree = "<group>"; };
 		6F4B352D24C3A59900F2497B /* multiplicationLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = multiplicationLevels.json; sourceTree = "<group>"; };
 		6F4B352F24C3A59900F2497B /* subtractionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subtractionLevels.json; sourceTree = "<group>"; };
@@ -72,9 +72,11 @@
 		6F608B7824D242A20084D128 /* BlueFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlueFire.sks; sourceTree = "<group>"; };
 		6F608B7A24D244FD0084D128 /* YellowFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = YellowFire.sks; sourceTree = "<group>"; };
 		6F608B7C24D249AF0084D128 /* BoomFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BoomFire.sks; sourceTree = "<group>"; };
+		6F70A5A324E8440B0087A8D9 /* MultiImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiImageNode.swift; sourceTree = "<group>"; };
 		6F7CBDC124B90AB0001F8612 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decoding.swift"; sourceTree = "<group>"; };
 		6F7CBDC724BA28F4001F8612 /* MathLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLevel.swift; sourceTree = "<group>"; };
+		6F80BC9624E8A3E8001B0975 /* MathNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathNumbers.swift; sourceTree = "<group>"; };
 		6F9E1A4C24C7CCA7001C96D0 /* SceneIntro.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SceneIntro.sks; sourceTree = SOURCE_ROOT; };
 		6FA1F70524A7BB800095DF7E /* mathColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mathColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1F70824A7BB800095DF7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		6FA1F72A24A7BB810095DF7E /* mathColorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mathColorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1F72E24A7BB810095DF7E /* mathColorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mathColorUITests.swift; sourceTree = "<group>"; };
 		6FA1F73024A7BB810095DF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FDE938A24A959F20031FF31 /* OperatorString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorString.swift; sourceTree = "<group>"; };
+		6FD9F6A324E82214006A12C0 /* MathQuestionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuestionNode.swift; sourceTree = "<group>"; };
 		6FF1CFCB24C3716B0004034A /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScene.swift; sourceTree = "<group>"; };
 		6FF1CFD524C396780004034A /* IntroScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = IntroScene.sks; sourceTree = "<group>"; };
 		6FF2CE9724C4A89A000629F8 /* additionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = additionLevels.json; sourceTree = "<group>"; };
@@ -139,8 +141,9 @@
 				6F7CBDC524BA0945001F8612 /* Bundle-Decoding.swift */,
 				6F7CBDC724BA28F4001F8612 /* MathLevel.swift */,
 				6F7CBDC124B90AB0001F8612 /* Level.swift */,
-				6FDE938A24A959F20031FF31 /* OperatorString.swift */,
-				6F070D9624DB59B500411E79 /* Tries.swift */,
+				6FD9F6A324E82214006A12C0 /* MathQuestionNode.swift */,
+				6F70A5A324E8440B0087A8D9 /* MultiImageNode.swift */,
+				6F80BC9624E8A3E8001B0975 /* MathNumbers.swift */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -368,9 +371,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FA1F70F24A7BB800095DF7E /* GameScene.swift in Sources */,
+				6FD9F6A424E82214006A12C0 /* MathQuestionNode.swift in Sources */,
+				6F80BC9724E8A3E8001B0975 /* MathNumbers.swift in Sources */,
 				6FA1F71124A7BB800095DF7E /* GameViewController.swift in Sources */,
-				6FDE938B24A959F20031FF31 /* OperatorString.swift in Sources */,
-				6F070D9724DB59B500411E79 /* Tries.swift in Sources */,
 				6FA1F70924A7BB800095DF7E /* AppDelegate.swift in Sources */,
 				6F7CBDC824BA28F4001F8612 /* MathLevel.swift in Sources */,
 				6F549AAA24BB671C003B5A1D /* BetweenLevels.swift in Sources */,
@@ -378,6 +381,7 @@
 				6F1357C724C653AF00A63BB6 /* SceneIntro.swift in Sources */,
 				6FF1CFCC24C3716B0004034A /* IntroScene.swift in Sources */,
 				6F7CBDC224B90AB0001F8612 /* Level.swift in Sources */,
+				6F70A5A424E8440B0087A8D9 /* MultiImageNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,7 @@ enum CollisinType : UInt32 {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
        
-    var mathQuestion = SKNode()
+    var mathQuestion = MathQuestionNode()
     var keypadLabel = SKLabelNode()
     var scoreLabel = SKLabelNode()
     var missedLabel = SKLabelNode()
@@ -56,8 +56,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var hats = 3
     
     var triesYPosition = CGFloat()
-    var triesNode = SKNode()
-    
+    var triesNode = MultiImageNode()
+
     
     
     
@@ -222,37 +222,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
      
-    func middleAlert (imageName : String)
-    {
-        let alertNode = SKSpriteNode(imageNamed: imageName)
-        alertNode.position = CGPoint(x: frame.midX, y: frame.midY)
-        self.addChild(alertNode)
-        let fade = SKAction.fadeAlpha(to: 0, duration: 2)
-        alertNode.run(fade)
-    }
     
     func spawnQuestion(operators: [String], numbers:[Int]) -> CGPoint
     {
-        let o = OperatorString()
         let fn = Int.random(in: 0 ..< numbers.count)
         let ln = Int.random(in: 0 ..< numbers.count)
-        o.firstNumber = numbers[fn]
-        o.secondNumber = numbers[ln]
+        let firstNumber = numbers[fn]
+        let secondNumber = numbers[ln]
+        let operatorName = OperatorSymbols.addition
         let op = Int.random(in: 0 ..< operators.count)
         switch operators[op] {
         case "A":
-            o.operatorName = OperatorSymbols.addition
+            let operatorName = OperatorSymbols.addition
         case "S":
-            o.operatorName = OperatorSymbols.subtraction
+            let operatorName = OperatorSymbols.subtraction
         case "M":
-            o.operatorName  = OperatorSymbols.multiplication
+            let operatorName  = OperatorSymbols.multiplication
         case "D":
-            o.operatorName = OperatorSymbols.division
+            let operatorName = OperatorSymbols.division
         default:
-            o.operatorName = OperatorSymbols.addition
+            let operatorName = OperatorSymbols.addition
         }
-        mathQuestion = o.buildNode()
-        result = o.calculateResult()
+        mathQuestion = MathQuestionNode(firstNumber: firstNumber, secondNumber: secondNumber, Operator: operatorName)
+        result = mathQuestion.calculateResult()
         let numberOfNodesInMathQuestion = mathQuestion.children.count
         let xsize = CGFloat(70 * numberOfNodesInMathQuestion)
         let size = CGSize(width: xsize, height: 70.0)
@@ -409,8 +401,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func redrawLives(yPosition : CGFloat)
     {
         triesNode.removeFromParent()
-        let tries = Tries(tries: hats, image: "magicianHat")
-        triesNode = tries.buildNode()
+        triesNode = MultiImageNode(imageName: "magicianHat", numberOfImages: hats)
         triesNode.position = CGPoint(x: frame.midX-80, y: yPosition)
         self.addChild(triesNode)
     }

@@ -49,9 +49,24 @@ class MathNumbers {
             let sn = Int.random(in: 0 ..< numberRange.count)
             self.secondNumber = self.numberRange[sn]
         } else {
-            arrNumbers = generateDivisionFactors(self.numberRange)
+            arrNumbers = generateDivisionFactors(numberRange: self.numberRange)
            let fn = Int.random(in: 0..<arrNumbers.count)
         }
         
+    }
+    
+    func generateDivisionFactors(numberRange: [Int]) -> [Fraction] {
+        let tmpFraction=Fraction()
+        var arrFractions = [Fraction]()
+        
+        for denominator in numberRange {
+            for numerator in 1...12 {
+                tmpFraction.numerator = numerator
+                tmpFraction.denominator = denominator
+                arrFractions.append(tmpFraction)
+            }
+        }
+        
+        return arrFractions
     }
 }

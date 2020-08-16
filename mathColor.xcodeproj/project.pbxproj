@@ -35,6 +35,7 @@
 		6FA1F71924A7BB800095DF7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1F71724A7BB800095DF7E /* LaunchScreen.storyboard */; };
 		6FA1F72424A7BB810095DF7E /* mathColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1F72324A7BB810095DF7E /* mathColorTests.swift */; };
 		6FA1F72F24A7BB810095DF7E /* mathColorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1F72E24A7BB810095DF7E /* mathColorUITests.swift */; };
+		6FA2D60F24E8B49B00D7922A /* Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2D60E24E8B49B00D7922A /* Fraction.swift */; };
 		6FD9F6A424E82214006A12C0 /* MathQuestionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9F6A324E82214006A12C0 /* MathQuestionNode.swift */; };
 		6FF1CFCC24C3716B0004034A /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1CFCB24C3716B0004034A /* IntroScene.swift */; };
 		6FF1CFD624C396780004034A /* IntroScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1CFD524C396780004034A /* IntroScene.sks */; };
@@ -93,6 +94,7 @@
 		6FA1F72A24A7BB810095DF7E /* mathColorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mathColorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1F72E24A7BB810095DF7E /* mathColorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mathColorUITests.swift; sourceTree = "<group>"; };
 		6FA1F73024A7BB810095DF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA2D60E24E8B49B00D7922A /* Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fraction.swift; sourceTree = "<group>"; };
 		6FD9F6A324E82214006A12C0 /* MathQuestionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuestionNode.swift; sourceTree = "<group>"; };
 		6FF1CFCB24C3716B0004034A /* IntroScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScene.swift; sourceTree = "<group>"; };
 		6FF1CFD524C396780004034A /* IntroScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = IntroScene.sks; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				6FD9F6A324E82214006A12C0 /* MathQuestionNode.swift */,
 				6F70A5A324E8440B0087A8D9 /* MultiImageNode.swift */,
 				6F80BC9624E8A3E8001B0975 /* MathNumbers.swift */,
+				6FA2D60E24E8B49B00D7922A /* Fraction.swift */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				6F80BC9724E8A3E8001B0975 /* MathNumbers.swift in Sources */,
 				6FA1F71124A7BB800095DF7E /* GameViewController.swift in Sources */,
 				6FA1F70924A7BB800095DF7E /* AppDelegate.swift in Sources */,
+				6FA2D60F24E8B49B00D7922A /* Fraction.swift in Sources */,
 				6F7CBDC824BA28F4001F8612 /* MathLevel.swift in Sources */,
 				6F549AAA24BB671C003B5A1D /* BetweenLevels.swift in Sources */,
 				6F7CBDC624BA0945001F8612 /* Bundle-Decoding.swift in Sources */,

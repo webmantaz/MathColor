@@ -14,10 +14,10 @@
             filePath = "mathColor/scenes/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -3,6 +3,7 @@
     {
         "levelName":"Entry",
         "levelNumber":1,
+        "levelType":"Factor",
         "chances":5,
         "minToPass":1,
         "timeToFall":8,
@@ -19,6 +20,7 @@
     {
         "levelName":"Hard",
         "levelNumber":2,
+        "levelType":"Factror",
         "chances":20,
         "minToPass":5,
         "timeToFall":8,
@@ -35,6 +37,7 @@
     {
         "levelName":"Harder",
         "levelNumber":3,
+        "levelType":"Factor",
         "chances":20,
         "minToPass":5,
         "timeToFall":8,
@@ -51,6 +54,7 @@
     {
         "levelName":"Hardest",
         "levelNumber":4,
+        "levelType":"Factor",
         "chances":20,
         "minToPass":5,
         "timeToFall":8,

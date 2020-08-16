@@ -50,6 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var chances = 0
     var minToPass = 0
     var timeToFall = 0.0
+    var levelType = ""
     
     var attempts = 0
     var levelPassed = false
@@ -93,7 +94,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         chances = l.chances
         minToPass = l.minToPass
         levelNumber = l.levelNumber
-        
+        levelType = l.levelType
         keypadLabel.text = ""
         let initialQuestionPosition = spawnQuestion(operators: operators, numbers: numbersToUse)
         self.attempts += 1
@@ -225,25 +226,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func spawnQuestion(operators: [String], numbers:[Int]) -> CGPoint
     {
-        let fn = Int.random(in: 0 ..< numbers.count)
-        let ln = Int.random(in: 0 ..< numbers.count)
-        let firstNumber = numbers[fn]
-        let secondNumber = numbers[ln]
-        let operatorName = OperatorSymbols.addition
+         
+        var operatorName = OperatorSymbols.addition
         let op = Int.random(in: 0 ..< operators.count)
         switch operators[op] {
         case "A":
-            let operatorName = OperatorSymbols.addition
+            operatorName = OperatorSymbols.addition
         case "S":
-            let operatorName = OperatorSymbols.subtraction
+            operatorName = OperatorSymbols.subtraction
         case "M":
-            let operatorName  = OperatorSymbols.multiplication
+            operatorName  = OperatorSymbols.multiplication
         case "D":
-            let operatorName = OperatorSymbols.division
+            operatorName = OperatorSymbols.division
         default:
-            let operatorName = OperatorSymbols.addition
+            operatorName = OperatorSymbols.addition
         }
-        mathQuestion = MathQuestionNode(firstNumber: firstNumber, secondNumber: secondNumber, Operator: operatorName)
+        var questionType : QuestionType
+        if self.levelType == "Factor"
+        {
+            questionType = QuestionType.factor
+        } else {
+            questionType = QuestionType.numberRange
+        }
+        let questionInfo = QuestionInfo(numberRange: numbers, questionOperator: operatorName, questionType: questionType, questionCase: QuestionCases.none)
+        mathQuestion = MathQuestionNode(firstNumber: questionInfo.firstNumber, secondNumber: questionInfo.secondNumber, Operator: questionInfo.questionOperator)
         result = mathQuestion.calculateResult()
         let numberOfNodesInMathQuestion = mathQuestion.children.count
         let xsize = CGFloat(70 * numberOfNodesInMathQuestion)

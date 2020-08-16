@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Fraction {
+struct Fraction {
     var numerator = 0
     var denominator = 0
     

@@ -13,6 +13,7 @@ class MathLevel {
     var levelName : String
     var levelNumber : Int
     var levelType : String
+    var levelCase : String
     var chances : Int
     var minToPass : Int
     var timeToFall : Double
@@ -35,6 +36,7 @@ class MathLevel {
         self.levelName = ""
         self.levelNumber = 0
         self.levelType = ""
+        self.levelCase = ""
         self.chances = 0
         self.minToPass = 0
         self.timeToFall = 0.0
@@ -81,6 +83,7 @@ class MathLevel {
         self.levelName = level.levelName
         self.levelNumber = level.levelNumber
         self.levelType = level.levelType
+        self.levelCase = level.levelCase
         self.operators = level.operators
         self.numbersToUse = level.numbersToUse
         self.chances = level.chances

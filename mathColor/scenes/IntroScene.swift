@@ -44,9 +44,7 @@ class IntroScene : SKScene
         subtractButtonNode.position = CGPoint(x: frame.minX+825, y: frame.midY-100)
         self.addChild(subtractButtonNode)
         
-        let button = CGRect(x: frame.midX-150, y: frame.midY-300, width: 300, height: 100)
-        let continueNode = SKShapeNode(rect: button)
-        continueNode.fillColor = UIColor.yellow
+        let continueNode  = SKSpriteNode(imageNamed: "nb_continue.png")
         continueNode.name = "continue"
         continueNode.isHidden = true
         self.addChild(continueNode)

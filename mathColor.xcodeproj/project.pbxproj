@@ -155,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				6F9E1A4C24C7CCA7001C96D0 /* SceneIntro.sks */,
+				6FF1CFCB24C3716B0004034A /* IntroScene.swift */,
 				6FA1F70A24A7BB800095DF7E /* GameScene.sks */,
 				6FA1F70E24A7BB800095DF7E /* GameScene.swift */,
-				6FF1CFCB24C3716B0004034A /* IntroScene.swift */,
 				6FF1CFD524C396780004034A /* IntroScene.sks */,
 				6F549AA724BB66DB003B5A1D /* BetweenLevels.sks */,
 				6F549AA924BB671C003B5A1D /* BetweenLevels.swift */,

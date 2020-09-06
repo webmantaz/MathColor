@@ -13,6 +13,7 @@ struct Level : Codable
     let levelName : String
     let levelNumber : Int
     let levelType : String
+    let levelCase : String
     let chances : Int
     let minToPass : Int
     let timeToFall : Double

@@ -10,6 +10,7 @@ enum kpEvent {
     case number
     case enter
     case backspace
+    case negative
 }
 
 enum operatorEvent {
@@ -51,6 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var minToPass = 0
     var timeToFall = 0.0
     var levelType = ""
+    var levelCase = ""
     
     var attempts = 0
     var levelPassed = false
@@ -58,6 +60,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var triesYPosition = CGFloat()
     var triesNode = MultiImageNode()
+    
+    
 
     
     
@@ -95,6 +99,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         minToPass = l.minToPass
         levelNumber = l.levelNumber
         levelType = l.levelType
+        levelCase = l.levelCase
         keypadLabel.text = ""
         let initialQuestionPosition = spawnQuestion(operators: operators, numbers: numbersToUse)
         self.attempts += 1
@@ -117,10 +122,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -1*deltaGravity)
         
         spawnKeypad()
-        keypadLabel.position = CGPoint(x: 550.0, y: 100.0)
-        self.addChild(keypadLabel)
-        keypadLabel.fontColor = UIColor.blue
-        keypadLabel.fontSize = 128
         
         scoreLabel.text = "0"
         scoreLabel.fontColor = UIColor.blue
@@ -216,6 +217,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 case "backspace":
                     kpValue = editKeyPad(keyPressed: "backspace", event: kpEvent.backspace)
                     keypadLabel.text = kpLabel
+                case "negative":
+                    kpValue = editKeyPad(keyPressed: "-", event: kpEvent.negative)
+                    keypadLabel.text = kpLabel
                 default:
                     keypadLabel.text = kpLabel
                 }
@@ -301,24 +305,55 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     {
         var x : CGFloat
         var y : CGFloat
-        let startX = CGFloat(frame.maxX * 0.12)
-        for num in 0...9 {
-            var tmpNode = SKSpriteNode(imageNamed: String(num)+".png")
-            x=startX + CGFloat(num*90)
-            y=CGFloat(frame.maxY*0.2)
+        let startX = frame.maxY * 0.05
+        let startY = frame.maxY*0.18
+        var currentRow = 0
+        var currentItem = 1
+        var num = 9
+        repeat {
+            if (num % 3 == 0)
+            {
+                currentRow += 1
+                currentItem = 4
+            }
+            currentItem -= 1
+            x=startX + CGFloat(120*currentItem)
+            y=startY - CGFloat((currentRow-1) * 120)
+            var tmpNode = SKSpriteNode(imageNamed: "bb_"+String(num)+".png")
             tmpNode.position = CGPoint(x: x, y: y)
             tmpNode.name = String(num)
             self.addChild(tmpNode)
-        }
-        let backspace = SKSpriteNode(imageNamed: "delete.png")
-        backspace.position = CGPoint(x: startX+frame.maxX/2, y: CGFloat(frame.maxY*0.14))
+            num -= 1
+        } while num > 0
+        let zero = SKSpriteNode(imageNamed: "bb_0.png")
+        zero.position = CGPoint(x: startX+(4*120), y: startY)
+        zero.name = "0"
+        self.addChild(zero)
+        let backspace = SKSpriteNode(imageNamed: "bb_backspace.png")
+        backspace.position = CGPoint(x: startX+(5*120), y: startY)
         backspace.name = "backspace"
         self.addChild(backspace)
-        let enter = SKSpriteNode(imageNamed: "enter.png")
-        enter.position = CGPoint(x: startX+frame.maxX/4, y: CGFloat(frame.maxY*0.14))
+        let enter = SKSpriteNode(imageNamed: "bb_enter.png")
+        enter.position = CGPoint(x: startX+(5*120), y: startY - 180)
         enter.name = "enter"
         self.addChild(enter)
-        
+        if levelCase == "Decimal" {
+            let decimal = SKSpriteNode(imageNamed: "bb_decimal.png")
+            decimal.name = "decimal"
+            decimal.position = CGPoint(x: startX+(4*120), y: startY-120)
+            self.addChild(decimal)
+        }
+        if levelCase == "Negative" {
+            let negative = SKSpriteNode(imageNamed: "bb_negative.png")
+            negative.name = "negative"
+            negative.position = CGPoint(x: startX+(4*120), y: startY-120)
+            self.addChild(negative)
+        }
+        keypadLabel.position = CGPoint(x: startX+(6*130), y: startY)
+        keypadLabel.fontColor = UIColor.black
+        keypadLabel.fontSize = 96
+        keypadLabel.fontName = "impact"
+        self.addChild(keypadLabel)
     }
     
     func editKeyPad(keyPressed : String, event : kpEvent) -> Int
@@ -328,7 +363,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         switch event {
         case .number:
             kpLabel += keyPressed
-            truncatedKP = String(kpLabel.prefix(5))
+            truncatedKP = String(kpLabel.prefix(4))
             kpLabel = truncatedKP
             valueOfKeypad = Int(kpLabel)!
         case .backspace:
@@ -346,7 +381,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 valueOfKeypad = Int(kpLabel)!
             }
+        case .negative:
+            if kpLabel.prefix(1) == "-" {
+                let sizeOfKpLabel = kpLabel.count
+                kpLabel = String(kpLabel.suffix(sizeOfKpLabel-1))
+            } else {
+                kpLabel = "-" + kpLabel
+            }
+            let truncKP = kpLabel.prefix(4)
+            kpLabel = String(truncKP)
+            if kpLabel == "-" {
+                valueOfKeypad = 0
+            } else {
+                if kpLabel.isEmpty {
+                    valueOfKeypad = 0
+                } else {
+                    valueOfKeypad = Int(kpLabel)!
+                }
+                
+            }
         }
+        
+        
         
         return valueOfKeypad
     }

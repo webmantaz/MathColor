@@ -106,7 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let barrierRect = CGRect(x: 0.0, y: 0.0, width: frame.maxX, height: 11.0)
         let barrier = SKShapeNode(rect: barrierRect)
         barrier.fillColor = UIColor.blue
-        barrier.position = CGPoint(x: 0, y: frame.maxY*0.23)
+        barrier.position = CGPoint(x: 0, y: frame.maxY*0.26)
         barrier.name = "barrier"
         let barrierPhysicsBodySize = CGSize(width: frame.maxX, height: 30.0)
         barrier.physicsBody = SKPhysicsBody(rectangleOf: barrierPhysicsBodySize)
@@ -349,7 +349,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             negative.position = CGPoint(x: startX+(4*120), y: startY-120)
             self.addChild(negative)
         }
-        keypadLabel.position = CGPoint(x: startX+(6*130), y: startY)
+        keypadLabel.position = CGPoint(x: frame.midX, y: startY+70)
         keypadLabel.fontColor = UIColor.black
         keypadLabel.fontSize = 96
         keypadLabel.fontName = "impact"
@@ -363,8 +363,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         switch event {
         case .number:
             kpLabel += keyPressed
-            truncatedKP = String(kpLabel.prefix(4))
-            kpLabel = truncatedKP
+            truncateLabel(maxDigits: 4)
             valueOfKeypad = Int(kpLabel)!
         case .backspace:
             let lengthOFKeypadLabel = kpLabel.count
@@ -376,7 +375,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             kpLabel = truncatedKP
         case .enter:
-            if kpLabel.isEmpty {
+            if kpLabel.isEmpty || kpLabel == "-" {
                 valueOfKeypad = 0
             } else {
                 valueOfKeypad = Int(kpLabel)!
@@ -388,7 +387,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 kpLabel = "-" + kpLabel
             }
-            let truncKP = kpLabel.prefix(4)
+            let truncKP = kpLabel.prefix(5)
             kpLabel = String(truncKP)
             if kpLabel == "-" {
                 valueOfKeypad = 0
@@ -405,6 +404,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         return valueOfKeypad
+        
+    }
+    
+    func truncateLabel(maxDigits: Int)
+    {
+        var isNegative = false
+        var numberOfDigits = 0
+        var numberOfDescribers = 0
+        var truncated = ""
+        var digits = ""
+                     
+        if kpLabel.prefix(1) == "-"
+        {
+            isNegative = true
+            numberOfDescribers += 1
+        }
+        numberOfDigits = kpLabel.count - numberOfDescribers
+        
+        if isNegative {
+            if numberOfDigits > maxDigits
+            {
+                digits = String(kpLabel.suffix(maxDigits))
+                kpLabel = "-" + digits
+            } else {
+                digits = String(kpLabel.suffix(numberOfDigits))
+                kpLabel = "-" + digits
+            }
+        } else {
+            truncated = String(kpLabel.prefix(maxDigits))
+            kpLabel = truncated
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {

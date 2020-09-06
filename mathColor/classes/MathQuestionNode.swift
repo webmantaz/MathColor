@@ -53,9 +53,18 @@ class MathQuestionNode : SKNode
         let operandPosition = operandNode.position
         self.addChild(operandNode)
         var pos = CGPoint()
-        let digitsInFirstNumber = arrFn.count
+        var digitsInFirstNumber = arrFn.count
+        if firstNumber < 0 {
+            digitsInFirstNumber += 1
+            arrFirstNumber.insert(SKSpriteNode(imageNamed: "subtraction.png")
+                        , at:numberOfDigitsFirstNumber)
+            pos.x = operandPosition.x - CGFloat((70*(digitsInFirstNumber-numberOfDigitsFirstNumber)))
+            pos.y = operandPosition.y
+            arrFirstNumber[numberOfDigitsFirstNumber].position = pos
+            self.addChild(arrFirstNumber[numberOfDigitsFirstNumber])
+            numberOfDigitsFirstNumber += 1
+        }
         for number in arrFn {
-            
             arrFirstNumber.insert(SKSpriteNode(imageNamed: String(number)+".png")
                 , at:numberOfDigitsFirstNumber)
             pos.x = operandPosition.x - CGFloat((70*(digitsInFirstNumber-numberOfDigitsFirstNumber)))
@@ -65,6 +74,16 @@ class MathQuestionNode : SKNode
             numberOfDigitsFirstNumber += 1
         }
         let arrSn = digits(secondNumber)
+        if secondNumber < 0
+        {
+            arrSecondNumber.insert(SKSpriteNode(imageNamed: "subtraction.png")
+                           , at:numberOfDigitsSecondNumber)
+            pos.x = operandPosition.x + CGFloat((70*(numberOfDigitsSecondNumber+1)))
+            pos.y = operandPosition.y
+            arrSecondNumber[numberOfDigitsSecondNumber].position = pos
+            self.addChild(arrSecondNumber[numberOfDigitsSecondNumber])
+            numberOfDigitsSecondNumber += 1
+        }
         for number2 in arrSn {
             arrSecondNumber.insert(SKSpriteNode(imageNamed: String(number2)+".png")
                 , at:numberOfDigitsSecondNumber)
@@ -105,11 +124,19 @@ class MathQuestionNode : SKNode
     }
     
     private func digits(_ number: Int) -> [Int] {
-        var number = number
+        var absNumber = 0
+        if number < 0
+        {
+            absNumber = -1 * number
+        } else {
+            absNumber = number
+        }
+        
+        var num = absNumber
         var digits: [Int] = []
-        while number > 0 {
-            digits.insert(number % 10, at: 0)
-            number /= 10
+        while num > 0 {
+            digits.insert(num % 10, at: 0)
+            num /= 10
         }
         return digits
     }
@@ -120,7 +147,7 @@ class MathQuestionNode : SKNode
         
         switch self.operatorName {
         case OperatorSymbols.addition:
-            result = self.firstNumber + self.secondNumber
+             result = self.firstNumber + self.secondNumber
         case OperatorSymbols.subtraction:
             result = self.firstNumber - self.secondNumber
         case OperatorSymbols.division:
@@ -130,5 +157,7 @@ class MathQuestionNode : SKNode
         }
     return result
     }
+    
+    
 }
 

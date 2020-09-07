@@ -127,19 +127,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.fontColor = UIColor.blue
         scoreLabel.position = CGPoint(x: frame.maxX - 200, y: frame.maxY-150)
         scoreLabel.fontSize = 96
+        scoreLabel.name = "scoreKabel"
         self.addChild(scoreLabel)
         let scoreImageNode = SKSpriteNode(imageNamed: "correct_small")
         scoreImageNode.position = CGPoint(x: scoreLabel.position.x, y: scoreLabel.position.y-70)
+        scoreImageNode.name = "scoreImage"
         self.addChild(scoreImageNode)
         missedLabel.text = "0"
+        missedLabel.name = "missedLabel"
         missedLabel.fontColor = UIColor.blue
         missedLabel.fontSize = 96
         missedLabel.position = CGPoint(x: frame.minX + 200, y: frame.maxY-150)
         self.addChild(missedLabel)
-        let misseImagheNode = SKSpriteNode(imageNamed: "wrong_small")
-        misseImagheNode.position = CGPoint(x: missedLabel.position.x, y: missedLabel.position.y-70)
-        self.addChild(misseImagheNode)
-        
+        let missedImageNode = SKSpriteNode(imageNamed: "wrong_small")
+        missedImageNode.position = CGPoint(x: missedLabel.position.x, y: missedLabel.position.y-70)
+        missedImageNode.name = "missedImage"
+        self.addChild(missedImageNode)
         redrawLives(yPosition: scoreImageNode.position.y)
         triesYPosition = scoreImageNode.position.y
     }
@@ -254,6 +257,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         let questionInfo = QuestionInfo(numberRange: numbers, questionOperator: operatorName, questionType: questionType, questionCase: QuestionCases.none)
         mathQuestion = MathQuestionNode(firstNumber: questionInfo.firstNumber, secondNumber: questionInfo.secondNumber, Operator: questionInfo.questionOperator)
+        mathQuestion.name = "mq"
         result = mathQuestion.calculateResult()
         let numberOfNodesInMathQuestion = mathQuestion.children.count
         let xsize = CGFloat(70 * numberOfNodesInMathQuestion)
@@ -337,12 +341,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         enter.position = CGPoint(x: startX+(5*120), y: startY - 180)
         enter.name = "enter"
         self.addChild(enter)
-        if levelCase == "Decimal" {
-            let decimal = SKSpriteNode(imageNamed: "bb_decimal.png")
-            decimal.name = "decimal"
-            decimal.position = CGPoint(x: startX+(4*120), y: startY-120)
-            self.addChild(decimal)
-        }
         if levelCase == "Negative" {
             let negative = SKSpriteNode(imageNamed: "bb_negative.png")
             negative.name = "negative"
@@ -352,6 +350,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         keypadLabel.position = CGPoint(x: frame.midX, y: startY+70)
         keypadLabel.fontColor = UIColor.black
         keypadLabel.fontSize = 96
+        keypadLabel.name = "keyPadLabel"
         keypadLabel.fontName = "impact"
         self.addChild(keypadLabel)
     }

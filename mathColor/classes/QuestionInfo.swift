@@ -15,13 +15,12 @@ enum QuestionType
 enum QuestionCases {
     case none
     case Negative
-    case Decimal
 }
 
 import Foundation
 
 class QuestionInfo {
-    var firstNumber = 0
+    var firstNumber = 9
     var secondNumber = 0
     var questionOperator : OperatorSymbols
     var numberRange = [Int]()

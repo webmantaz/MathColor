@@ -8,7 +8,7 @@
         "chances":5,
         "minToPass":1,
         "timeToFall":8,
-        "numbersToUse":[1,2,3],
+        "numbersToUse":[-1,2,-3,4,-5,-10],
         "operators":["S"],
         "backgroundColor":"blue",
         "digitImageSet":"Default",

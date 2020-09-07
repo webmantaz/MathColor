@@ -132,7 +132,7 @@ class MathQuestionNode : SKNode
             absNumber = number
         }
         
-        var num = absNumber
+        var num = Int(absNumber)
         var digits: [Int] = []
         while num > 0 {
             digits.insert(num % 10, at: 0)
@@ -140,7 +140,7 @@ class MathQuestionNode : SKNode
         }
         return digits
     }
-    
+        
     public func calculateResult() -> Int
     {
         var result = 0
@@ -157,6 +157,8 @@ class MathQuestionNode : SKNode
         }
     return result
     }
+    
+        
     
     
 }

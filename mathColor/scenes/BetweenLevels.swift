@@ -32,6 +32,7 @@ class BetweenLevels : SKScene
         cheerNode.fontSize = 96
         cheerNode.position = CGPoint(x: frame.midX, y: frame.midY)
         cheerNode.text = "Try Again !"
+        cheerNode.name = "cheer"
         let tmpRect = CGRect(x: frame.midX-375, y: frame.maxY/3.0, width: 300, height: 100)
         let backNode = SKShapeNode(rect: tmpRect)
         backNode.fillColor = UIColor.red

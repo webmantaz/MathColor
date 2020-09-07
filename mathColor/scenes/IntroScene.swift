@@ -21,6 +21,7 @@ class IntroScene : SKScene
         titleNode.fontColor = UIColor.black
         titleNode.position = CGPoint(x: frame.midX+20, y: frame.midY+50)
         titleNode.text = "Wizard Math"
+        titleNode.name = "title"
         self.addChild(titleNode)
     
         let additionButtonNode = SKSpriteNode(imageNamed: "addition.png")

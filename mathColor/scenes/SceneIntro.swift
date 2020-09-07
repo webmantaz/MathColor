@@ -43,12 +43,14 @@ class SceneIntro : SKScene
         levelNameNode.fontSize = 96
         levelNameNode.position = CGPoint(x: frame.midX, y: frame.midY+400)
         levelNameNode.text = levelName
+        levelNameNode.name = "leveName"
         self.addChild(levelNameNode)
         
         let levelChancesNode = SKLabelNode()
         levelChancesNode.fontColor = UIColor.black
         levelChancesNode.fontSize = 96
         levelChancesNode.position = CGPoint(x: frame.midX, y: frame.midY+200)
+        levelChancesNode.name = "levelChances"
         levelChancesNode.text = String(levelChances)
         self.addChild(levelChancesNode)
         
@@ -56,6 +58,7 @@ class SceneIntro : SKScene
         levelMinNode.fontColor = UIColor.black
         levelMinNode.fontSize = 96
         levelMinNode.position = CGPoint(x: frame.midX, y: frame.midY)
+        levelMinNode.name = "l"
         levelMinNode.text = String(levelMinToPass) + " "
         self.addChild(levelMinNode)
         
@@ -76,6 +79,8 @@ class SceneIntro : SKScene
                 if node.name! == "start"
                 {
                     changeScene()
+                } else {
+                    // do nothing
                 }
             }
         

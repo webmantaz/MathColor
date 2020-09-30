@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:mathColor.xcodeproj">
+      location = "self:/Users/jameswallace/Documents/WorkingCopy/MathColor/wizardMath.xcodeproj">
    </FileRef>
 </Workspace>

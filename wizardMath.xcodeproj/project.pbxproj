@@ -79,7 +79,7 @@
 		6F7CBDC724BA28F4001F8612 /* MathLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLevel.swift; sourceTree = "<group>"; };
 		6F80BC9624E8A3E8001B0975 /* QuestionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionInfo.swift; sourceTree = "<group>"; };
 		6F9E1A4C24C7CCA7001C96D0 /* SceneIntro.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SceneIntro.sks; sourceTree = SOURCE_ROOT; };
-		6FA1F70524A7BB800095DF7E /* mathColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mathColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA1F70524A7BB800095DF7E /* wizardMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wizardMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1F70824A7BB800095DF7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA1F70A24A7BB800095DF7E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		6FA1F70E24A7BB800095DF7E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -88,10 +88,10 @@
 		6FA1F71524A7BB800095DF7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA1F71824A7BB800095DF7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FA1F71A24A7BB800095DF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FA1F71F24A7BB810095DF7E /* mathColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mathColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA1F71F24A7BB810095DF7E /* wizardMathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wizardMathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1F72324A7BB810095DF7E /* mathColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mathColorTests.swift; sourceTree = "<group>"; };
 		6FA1F72524A7BB810095DF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FA1F72A24A7BB810095DF7E /* mathColorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mathColorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA1F72A24A7BB810095DF7E /* wizardMathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wizardMathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1F72E24A7BB810095DF7E /* mathColorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mathColorUITests.swift; sourceTree = "<group>"; };
 		6FA1F73024A7BB810095DF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA2D60E24E8B49B00D7922A /* Fraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fraction.swift; sourceTree = "<group>"; };
@@ -176,9 +176,9 @@
 				6F608B7624D238320084D128 /* RedFire.sks */,
 				6F608B7224D228B80084D128 /* PurpleFire.sks */,
 				6F608B7324D228B80084D128 /* Assets.xcassets */,
-				6FA1F70724A7BB800095DF7E /* mathColor */,
-				6FA1F72224A7BB810095DF7E /* mathColorTests */,
-				6FA1F72D24A7BB810095DF7E /* mathColorUITests */,
+				6FA1F70724A7BB800095DF7E /* wizardMath */,
+				6FA1F72224A7BB810095DF7E /* wizardMathTests */,
+				6FA1F72D24A7BB810095DF7E /* wizardMathUITests */,
 				6FA1F70624A7BB800095DF7E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,14 +186,14 @@
 		6FA1F70624A7BB800095DF7E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6FA1F70524A7BB800095DF7E /* mathColor.app */,
-				6FA1F71F24A7BB810095DF7E /* mathColorTests.xctest */,
-				6FA1F72A24A7BB810095DF7E /* mathColorUITests.xctest */,
+				6FA1F70524A7BB800095DF7E /* wizardMath.app */,
+				6FA1F71F24A7BB810095DF7E /* wizardMathTests.xctest */,
+				6FA1F72A24A7BB810095DF7E /* wizardMathUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6FA1F70724A7BB800095DF7E /* mathColor */ = {
+		6FA1F70724A7BB800095DF7E /* wizardMath */ = {
 			isa = PBXGroup;
 			children = (
 				6FA1F70824A7BB800095DF7E /* AppDelegate.swift */,
@@ -206,33 +206,33 @@
 				6FA1F71724A7BB800095DF7E /* LaunchScreen.storyboard */,
 				6FA1F71A24A7BB800095DF7E /* Info.plist */,
 			);
-			path = mathColor;
+			path = wizardMath;
 			sourceTree = "<group>";
 		};
-		6FA1F72224A7BB810095DF7E /* mathColorTests */ = {
+		6FA1F72224A7BB810095DF7E /* wizardMathTests */ = {
 			isa = PBXGroup;
 			children = (
 				6FA1F72324A7BB810095DF7E /* mathColorTests.swift */,
 				6FA1F72524A7BB810095DF7E /* Info.plist */,
 			);
-			path = mathColorTests;
+			path = wizardMathTests;
 			sourceTree = "<group>";
 		};
-		6FA1F72D24A7BB810095DF7E /* mathColorUITests */ = {
+		6FA1F72D24A7BB810095DF7E /* wizardMathUITests */ = {
 			isa = PBXGroup;
 			children = (
 				6FA1F72E24A7BB810095DF7E /* mathColorUITests.swift */,
 				6FA1F73024A7BB810095DF7E /* Info.plist */,
 			);
-			path = mathColorUITests;
+			path = wizardMathUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6FA1F70424A7BB7F0095DF7E /* mathColor */ = {
+		6FA1F70424A7BB7F0095DF7E /* wizardMath */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6FA1F73324A7BB810095DF7E /* Build configuration list for PBXNativeTarget "mathColor" */;
+			buildConfigurationList = 6FA1F73324A7BB810095DF7E /* Build configuration list for PBXNativeTarget "wizardMath" */;
 			buildPhases = (
 				6FA1F70124A7BB7F0095DF7E /* Sources */,
 				6FA1F70224A7BB7F0095DF7E /* Frameworks */,
@@ -242,14 +242,14 @@
 			);
 			dependencies = (
 			);
-			name = mathColor;
+			name = wizardMath;
 			productName = mathColor;
-			productReference = 6FA1F70524A7BB800095DF7E /* mathColor.app */;
+			productReference = 6FA1F70524A7BB800095DF7E /* wizardMath.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6FA1F71E24A7BB810095DF7E /* mathColorTests */ = {
+		6FA1F71E24A7BB810095DF7E /* wizardMathTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6FA1F73624A7BB810095DF7E /* Build configuration list for PBXNativeTarget "mathColorTests" */;
+			buildConfigurationList = 6FA1F73624A7BB810095DF7E /* Build configuration list for PBXNativeTarget "wizardMathTests" */;
 			buildPhases = (
 				6FA1F71B24A7BB810095DF7E /* Sources */,
 				6FA1F71C24A7BB810095DF7E /* Frameworks */,
@@ -260,14 +260,14 @@
 			dependencies = (
 				6FA1F72124A7BB810095DF7E /* PBXTargetDependency */,
 			);
-			name = mathColorTests;
+			name = wizardMathTests;
 			productName = mathColorTests;
-			productReference = 6FA1F71F24A7BB810095DF7E /* mathColorTests.xctest */;
+			productReference = 6FA1F71F24A7BB810095DF7E /* wizardMathTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6FA1F72924A7BB810095DF7E /* mathColorUITests */ = {
+		6FA1F72924A7BB810095DF7E /* wizardMathUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6FA1F73924A7BB810095DF7E /* Build configuration list for PBXNativeTarget "mathColorUITests" */;
+			buildConfigurationList = 6FA1F73924A7BB810095DF7E /* Build configuration list for PBXNativeTarget "wizardMathUITests" */;
 			buildPhases = (
 				6FA1F72624A7BB810095DF7E /* Sources */,
 				6FA1F72724A7BB810095DF7E /* Frameworks */,
@@ -278,9 +278,9 @@
 			dependencies = (
 				6FA1F72C24A7BB810095DF7E /* PBXTargetDependency */,
 			);
-			name = mathColorUITests;
+			name = wizardMathUITests;
 			productName = mathColorUITests;
-			productReference = 6FA1F72A24A7BB810095DF7E /* mathColorUITests.xctest */;
+			productReference = 6FA1F72A24A7BB810095DF7E /* wizardMathUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -306,7 +306,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6FA1F70024A7BB7F0095DF7E /* Build configuration list for PBXProject "mathColor" */;
+			buildConfigurationList = 6FA1F70024A7BB7F0095DF7E /* Build configuration list for PBXProject "wizardMath" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,9 +319,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6FA1F70424A7BB7F0095DF7E /* mathColor */,
-				6FA1F71E24A7BB810095DF7E /* mathColorTests */,
-				6FA1F72924A7BB810095DF7E /* mathColorUITests */,
+				6FA1F70424A7BB7F0095DF7E /* wizardMath */,
+				6FA1F71E24A7BB810095DF7E /* wizardMathTests */,
+				6FA1F72924A7BB810095DF7E /* wizardMathUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,12 +410,12 @@
 /* Begin PBXTargetDependency section */
 		6FA1F72124A7BB810095DF7E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6FA1F70424A7BB7F0095DF7E /* mathColor */;
+			target = 6FA1F70424A7BB7F0095DF7E /* wizardMath */;
 			targetProxy = 6FA1F72024A7BB810095DF7E /* PBXContainerItemProxy */;
 		};
 		6FA1F72C24A7BB810095DF7E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6FA1F70424A7BB7F0095DF7E /* mathColor */;
+			target = 6FA1F70424A7BB7F0095DF7E /* wizardMath */;
 			targetProxy = 6FA1F72B24A7BB810095DF7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -490,6 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -544,6 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -561,7 +563,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MD467F482;
-				INFOPLIST_FILE = mathColor/Info.plist;
+				INFOPLIST_FILE = wizardMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,7 +583,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = mathColor/Info.plist;
+				INFOPLIST_FILE = wizardMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,7 +614,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mathColor.app/mathColor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wizardMath.app/wizardMath";
 			};
 			name = Debug;
 		};
@@ -634,7 +636,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mathColor.app/mathColor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wizardMath.app/wizardMath";
 			};
 			name = Release;
 		};
@@ -681,7 +683,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6FA1F70024A7BB7F0095DF7E /* Build configuration list for PBXProject "mathColor" */ = {
+		6FA1F70024A7BB7F0095DF7E /* Build configuration list for PBXProject "wizardMath" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6FA1F73124A7BB810095DF7E /* Debug */,
@@ -690,7 +692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6FA1F73324A7BB810095DF7E /* Build configuration list for PBXNativeTarget "mathColor" */ = {
+		6FA1F73324A7BB810095DF7E /* Build configuration list for PBXNativeTarget "wizardMath" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6FA1F73424A7BB810095DF7E /* Debug */,
@@ -699,7 +701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6FA1F73624A7BB810095DF7E /* Build configuration list for PBXNativeTarget "mathColorTests" */ = {
+		6FA1F73624A7BB810095DF7E /* Build configuration list for PBXNativeTarget "wizardMathTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6FA1F73724A7BB810095DF7E /* Debug */,
@@ -708,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6FA1F73924A7BB810095DF7E /* Build configuration list for PBXNativeTarget "mathColorUITests" */ = {
+		6FA1F73924A7BB810095DF7E /* Build configuration list for PBXNativeTarget "wizardMathUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6FA1F73A24A7BB810095DF7E /* Debug */,

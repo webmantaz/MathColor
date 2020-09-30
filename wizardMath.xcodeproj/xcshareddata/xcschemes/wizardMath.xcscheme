@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6FA1F70424A7BB7F0095DF7E"
-               BuildableName = "mathColor.app"
-               BlueprintName = "mathColor"
-               ReferencedContainer = "container:mathColor.xcodeproj">
+               BuildableName = "wizardMath.app"
+               BlueprintName = "wizardMath"
+               ReferencedContainer = "container:wizardMath.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6FA1F71E24A7BB810095DF7E"
-               BuildableName = "mathColorTests.xctest"
-               BlueprintName = "mathColorTests"
-               ReferencedContainer = "container:mathColor.xcodeproj">
+               BuildableName = "wizardMathTests.xctest"
+               BlueprintName = "wizardMathTests"
+               ReferencedContainer = "container:wizardMath.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6FA1F72924A7BB810095DF7E"
-               BuildableName = "mathColorUITests.xctest"
-               BlueprintName = "mathColorUITests"
-               ReferencedContainer = "container:mathColor.xcodeproj">
+               BuildableName = "wizardMathUITests.xctest"
+               BlueprintName = "wizardMathUITests"
+               ReferencedContainer = "container:wizardMath.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6FA1F70424A7BB7F0095DF7E"
-            BuildableName = "mathColor.app"
-            BlueprintName = "mathColor"
-            ReferencedContainer = "container:mathColor.xcodeproj">
+            BuildableName = "wizardMath.app"
+            BlueprintName = "wizardMath"
+            ReferencedContainer = "container:wizardMath.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6FA1F70424A7BB7F0095DF7E"
-            BuildableName = "mathColor.app"
-            BlueprintName = "mathColor"
-            ReferencedContainer = "container:mathColor.xcodeproj">
+            BuildableName = "wizardMath.app"
+            BlueprintName = "wizardMath"
+            ReferencedContainer = "container:wizardMath.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

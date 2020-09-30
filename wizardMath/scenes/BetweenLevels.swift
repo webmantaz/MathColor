@@ -13,13 +13,32 @@ class BetweenLevels : SKScene
 {
     
     var currentLevel = 1
+    var symbol : OperatorSymbols
     
     override func didMove(to view: SKView) {
         let defaults = UserDefaults.standard
         self.backgroundColor = SKColor.white
         currentLevel = defaults.integer(forKey: "CurrentLevel")
         let levelCompleted = defaults.integer(forKey: "LevelCompleted")
-  
+        
+        let levelOperator = defaults.string(forKey: "Operator")
+        let l = MathLevel()
+        switch levelOperator {
+        case "A":
+            symbol = OperatorSymbols.addition
+        case "M":
+            symbol = OperatorSymbols.multiplication
+        case "S":
+            symbol = OperatorSymbols.subtraction
+        case "D":
+            symbol = OperatorSymbols.division
+        default:
+            symbol = OperatorSymbols.addition
+        }
+        l.getLevel(number: levelCompleted, levelOperator: symbol)
+        let levelChances = l.chances
+        let levelMinToPass = l.minToPass
+        
         var congrats = false
         if currentLevel == levelCompleted
         {

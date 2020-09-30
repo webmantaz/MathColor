@@ -452,6 +452,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     levelPassed = true
                     let defaults = UserDefaults.standard
                     defaults.set(self.levelNumber, forKey: "LevelCompleted")
+                    defaults.set(score, forKey: "levelScore")
                     changeScene()
                 } else {
                     levelPassed = false

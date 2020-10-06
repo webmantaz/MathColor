@@ -51,34 +51,34 @@ class BetweenLevels : SKScene
         var stars = 0
         
         if congrats == true && levelScore > 0 {
-            let scoreDiff = levelScore - levelMinToPass
-            let scoreDiffSection = (levelChances - levelMinToPass) % 3
+            let scoreDiff = levelChances - levelMinToPass
+            let scoreDiffSection = Double(scoreDiff) / 3.0
+            let minimumRange = Double(levelMinToPass) + scoreDiffSection
             
-            switch scoreDiffSection {
-            case 0:
+            if Double(levelScore) < minimumRange
+            {
                 stars = 1
-            case 1:
-                stars = 2
-            case 2:
+            } else if Double(levelScore) < minimumRange+scoreDiffSection
+            {
+                stars = 2 
+            } else {
                 stars = 3
-            default:
-                stars = 0
             }
         }
+        
+        
+            
+            
        
         
-        let cheerNode = SKLabelNode()
-        cheerNode.fontColor = UIColor.black
-        cheerNode.fontSize = 96
-        cheerNode.position = CGPoint(x: frame.midX, y: frame.midY)
-        cheerNode.text = "Try Again !"
+        let cheerNode = MultiImageNode(imageName: "star.png", numberOfImages: stars)
+        cheerNode.position = CGPoint(x: frame.maxX*0.3, y: frame.midY)
         cheerNode.name = "cheer"
         let backNode = SKSpriteNode(imageNamed: "nb_replaylevel.png")
         backNode.position = CGPoint(x: frame.maxX*0.3, y: frame.maxY/3.0)
         backNode.name = "back"
         self.addChild(backNode)
         if congrats == true {
-            cheerNode.text = String(stars)
             let nextNode = SKSpriteNode(imageNamed: "nb_nextlevel.png")
             nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
             nextNode.name = "next"

@@ -47,6 +47,7 @@ class IntroScene : SKScene
         
         let continueNode  = SKSpriteNode(imageNamed: "nb_continue.png")
         continueNode.name = "continue"
+        continueNode.position = CGPoint(x: frame.midX, y: frame.minY * 0.5)
         continueNode.isHidden = true
         self.addChild(continueNode)
         

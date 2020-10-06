@@ -13,9 +13,10 @@ class BetweenLevels : SKScene
 {
     
     var currentLevel = 1
-    var symbol : OperatorSymbols
     
     override func didMove(to view: SKView) {
+        var symbol : OperatorSymbols
+                
         let defaults = UserDefaults.standard
         self.backgroundColor = SKColor.white
         currentLevel = defaults.integer(forKey: "CurrentLevel")
@@ -38,11 +39,31 @@ class BetweenLevels : SKScene
         l.getLevel(number: levelCompleted, levelOperator: symbol)
         let levelChances = l.chances
         let levelMinToPass = l.minToPass
+      
         
         var congrats = false
         if currentLevel == levelCompleted
         {
                 congrats=true
+        }
+        let levelScore = defaults.integer(forKey: "levelScore")
+        
+        var stars = 0
+        
+        if congrats == true && levelScore > 0 {
+            let scoreDiff = levelScore - levelMinToPass
+            let scoreDiffSection = (levelChances - levelMinToPass) % 3
+            
+            switch scoreDiffSection {
+            case 0:
+                stars = 1
+            case 1:
+                stars = 2
+            case 2:
+                stars = 3
+            default:
+                stars = 0
+            }
         }
        
         
@@ -52,18 +73,15 @@ class BetweenLevels : SKScene
         cheerNode.position = CGPoint(x: frame.midX, y: frame.midY)
         cheerNode.text = "Try Again !"
         cheerNode.name = "cheer"
-        let tmpRect = CGRect(x: frame.midX-375, y: frame.maxY/3.0, width: 300, height: 100)
-        let backNode = SKShapeNode(rect: tmpRect)
-        backNode.fillColor = UIColor.red
+        let backNode = SKSpriteNode(imageNamed: "nb_replaylevel.png")
+        backNode.position = CGPoint(x: frame.maxX*0.3, y: frame.maxY/3.0)
         backNode.name = "back"
         self.addChild(backNode)
         if congrats == true {
-            cheerNode.text = "Congratulations !"
-            let tmpRect2 = CGRect(x: frame.midX+75, y: frame.maxY/3.0, width: 300, height: 100)
-            let nextNode = SKShapeNode(rect: tmpRect2)
-            nextNode.fillColor = UIColor.green
+            cheerNode.text = String(stars)
+            let nextNode = SKSpriteNode(imageNamed: "nb_nextlevel.png")
+            nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
             nextNode.name = "next"
-            
             self.addChild(nextNode)
         }
         

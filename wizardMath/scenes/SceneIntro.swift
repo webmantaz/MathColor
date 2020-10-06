@@ -35,36 +35,18 @@ class SceneIntro : SKScene
         l.getLevel(number: currentLevel, levelOperator: symbol)
         
         let levelName = l.levelName
-        let levelChances = l.chances
-        let levelMinToPass = l.minToPass
         
         let levelNameNode = SKLabelNode()
         levelNameNode.fontColor = UIColor.black
         levelNameNode.fontSize = 96
+        levelNameNode.fontName = "Impact"
         levelNameNode.position = CGPoint(x: frame.midX, y: frame.midY+400)
         levelNameNode.text = levelName
         levelNameNode.name = "leveName"
         self.addChild(levelNameNode)
         
-        let levelChancesNode = SKLabelNode()
-        levelChancesNode.fontColor = UIColor.black
-        levelChancesNode.fontSize = 96
-        levelChancesNode.position = CGPoint(x: frame.midX, y: frame.midY+200)
-        levelChancesNode.name = "levelChances"
-        levelChancesNode.text = String(levelChances)
-        self.addChild(levelChancesNode)
-        
-        let levelMinNode = SKLabelNode()
-        levelMinNode.fontColor = UIColor.black
-        levelMinNode.fontSize = 96
-        levelMinNode.position = CGPoint(x: frame.midX, y: frame.midY)
-        levelMinNode.name = "l"
-        levelMinNode.text = String(levelMinToPass) + " "
-        self.addChild(levelMinNode)
-        
-        let startRect = CGRect(x: frame.midX-150, y: frame.midY-200, width: 300, height: 100)
-        let startNode = SKShapeNode(rect: startRect)
-        startNode.fillColor = UIColor.black
+        let startNode = SKSpriteNode(imageNamed: "nb_startlevel.png")
+        startNode.position = CGPoint(x: frame.midX, y: frame.midY-200)
         startNode.name = "start"
         self.addChild(startNode)
     }

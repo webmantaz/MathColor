@@ -163,7 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let loc = touch.location(in: self)
             let kpNode = self.nodes(at: loc)
             for node in kpNode {
-                switch node.name! {
+                switch node.name {
                 case "0":
                     kpValue = editKeyPad(keyPressed: "0", event: kpEvent.number)
                     if kpValue == 0

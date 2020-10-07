@@ -103,12 +103,12 @@ class BetweenLevels : SKScene
             let  actionNode = self.nodes(at: loc)
             let defaults = UserDefaults.standard
             for node in actionNode {
-                if node.name! == "back"
+                if node.name == "back"
                 {
                     // go back
                     changeScene()
                 }
-                else if node.name! == "next"
+                else if node.name == "next"
                 {
                     // next
                     currentLevel += 1

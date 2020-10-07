@@ -39,6 +39,7 @@ class MultiImageNode : SKNode
         {
             let tmpNode = SKSpriteNode(imageNamed: self.imageName)
             let imageWidth = tmpNode.size.width
+            tmpNode.name = "multiimage"
             tmpNode.position = CGPoint(x: self.position.x+imageWidth*CGFloat(number-1), y: self.position.y)
             self.addChild(tmpNode)
         }

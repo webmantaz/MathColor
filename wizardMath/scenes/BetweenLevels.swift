@@ -66,26 +66,32 @@ class BetweenLevels : SKScene
             }
         }
         
-        
-            
-            
-       
-        
-        let cheerNode = MultiImageNode(imageName: "star.png", numberOfImages: stars)
-        cheerNode.position = CGPoint(x: frame.maxX*0.3, y: frame.midY)
+        let cheerNode = SKLabelNode()
+        cheerNode.position = CGPoint(x: frame.midX, y: frame.midY)
+        cheerNode.fontSize = 96
+        cheerNode.fontColor = UIColor.black
+        cheerNode.text = "Try Again"
         cheerNode.name = "cheer"
+        cheerNode.zPosition = 100
+        
+        self.addChild(cheerNode)
+        
         let backNode = SKSpriteNode(imageNamed: "nb_replaylevel.png")
         backNode.position = CGPoint(x: frame.maxX*0.3, y: frame.maxY/3.0)
         backNode.name = "back"
         self.addChild(backNode)
         if congrats == true {
+            cheerNode.isHidden = true
+            let starNode = MultiImageNode(imageName: "star.png", numberOfImages: stars)
+            starNode.position = CGPoint(x: frame.maxX*0.3, y: frame.midY)
+            starNode.name = "star"
+            self.addChild(starNode)
             let nextNode = SKSpriteNode(imageNamed: "nb_nextlevel.png")
             nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
             nextNode.name = "next"
             self.addChild(nextNode)
         }
         
-        self.addChild(cheerNode)
         
         
     }
@@ -108,6 +114,8 @@ class BetweenLevels : SKScene
                     currentLevel += 1
                     defaults.set(self.currentLevel, forKey: "CurrentLevel")
                     changeScene()
+                } else {
+                // do nothing
                 }
             }
         }

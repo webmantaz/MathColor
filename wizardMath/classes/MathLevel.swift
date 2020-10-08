@@ -67,7 +67,12 @@ class MathLevel {
         } else {
             tmpNumber = number
         }
+        let operatorLevels = additionLevels.count
+        if number > operatorLevels {
+            tmpNumber = operatorLevels
+        }
         var level = additionLevels[tmpNumber-1]
+        
                 
         switch levelOperator {
         case OperatorSymbols.addition:

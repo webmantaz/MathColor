@@ -31,6 +31,8 @@ enum CollisinType : UInt32 {
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
        
+    let player = AudioPlayerImpl()
+    
     var mathQuestion = MathQuestionNode()
     var keypadLabel = SKLabelNode()
     var scoreLabel = SKLabelNode()
@@ -67,6 +69,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func didMove(to view: SKView) {
+       
+        player.effectsVolume = 0.5
+        player.musicVolume = 0.5
         
         var symbol : OperatorSymbols
         
@@ -88,6 +93,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         default:
             symbol = OperatorSymbols.addition
         }
+        
         l.getLevel(number: levelNumber, levelOperator: symbol)
         defaults.set(l.levelNumber, forKey: "CurrentLevel")
 
@@ -211,6 +217,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             sparkle.name = "sparkle"
                             self.addChild(sparkle)
                         }
+                        player.play(effect: Audio.EffectFiles.spell)
                         mathQuestion.removeFromParent()
                         respawn = true
                         // middleAlert(imageName: "correct_big.png")

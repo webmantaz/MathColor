@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F1357C724C653AF00A63BB6 /* SceneIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1357C624C653AF00A63BB6 /* SceneIntro.swift */; };
+		6F15260B252FE2DD008B3413 /* trance-menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F15260A252FE2DD008B3413 /* trance-menu.mp3 */; };
 		6F4B353124C3A59900F2497B /* multiplicationLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B352D24C3A59900F2497B /* multiplicationLevels.json */; };
 		6F4B353324C3A59900F2497B /* subtractionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B352F24C3A59900F2497B /* subtractionLevels.json */; };
 		6F4B353424C3A59900F2497B /* divisionLevels.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F4B353024C3A59900F2497B /* divisionLevels.json */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		6F1357C624C653AF00A63BB6 /* SceneIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneIntro.swift; sourceTree = "<group>"; };
+		6F15260A252FE2DD008B3413 /* trance-menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "trance-menu.mp3"; sourceTree = "<group>"; };
 		6F4B352D24C3A59900F2497B /* multiplicationLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = multiplicationLevels.json; sourceTree = "<group>"; };
 		6F4B352F24C3A59900F2497B /* subtractionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subtractionLevels.json; sourceTree = "<group>"; };
 		6F4B353024C3A59900F2497B /* divisionLevels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = divisionLevels.json; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		6F6E2386252FB2B50000A93A /* music */ = {
 			isa = PBXGroup;
 			children = (
+				6F15260A252FE2DD008B3413 /* trance-menu.mp3 */,
 			);
 			path = music;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				6F4B353124C3A59900F2497B /* multiplicationLevels.json in Resources */,
 				6FA1F71924A7BB800095DF7E /* LaunchScreen.storyboard in Resources */,
 				6FF2CE9824C4A89A000629F8 /* additionLevels.json in Resources */,
+				6F15260B252FE2DD008B3413 /* trance-menu.mp3 in Resources */,
 				6F608B7924D242A20084D128 /* BlueFire.sks in Resources */,
 				6FF1CFD624C396780004034A /* IntroScene.sks in Resources */,
 				6F608B7B24D244FD0084D128 /* YellowFire.sks in Resources */,

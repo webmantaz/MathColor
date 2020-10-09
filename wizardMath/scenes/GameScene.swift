@@ -71,7 +71,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
        
         player.effectsVolume = 0.5
-        player.musicVolume = 0.5
+        player.musicVolume = 0.3
+        player.play(music: Audio.MusicFiles.airship)
         
         var symbol : OperatorSymbols
         

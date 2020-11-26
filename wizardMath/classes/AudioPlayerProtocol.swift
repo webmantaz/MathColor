@@ -12,8 +12,9 @@ import Foundation
 protocol AudioPlayer {
     
     var musicVolume: Float { get set }
-    func play(music: Music)
+    func play(music: Music, timeToPlay: TimeInterval)
     func pause(music: Music)
+    func stop(music : Music)
     
     var effectsVolume: Float { get set }
     func play(effect: Effect)

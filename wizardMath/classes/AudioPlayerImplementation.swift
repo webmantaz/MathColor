@@ -21,10 +21,13 @@ class AudioPlayerImpl {
 
 extension AudioPlayerImpl: AudioPlayer {
     
-    func play(music: Music) {
+    func play(music: Music, timeToPlay: TimeInterval) {
         currentMusicPlayer?.stop()
         guard let newPlayer = try? AVAudioPlayer(soundFile: music) else { return }
         newPlayer.volume = musicVolume
+        let lengthOfMusic = newPlayer.duration
+        let loops = Int(timeToPlay / lengthOfMusic) + 1
+        newPlayer.numberOfLoops = loops
         newPlayer.play()
         currentMusicPlayer = newPlayer
     }
@@ -33,6 +36,11 @@ extension AudioPlayerImpl: AudioPlayer {
         currentMusicPlayer?.pause()
     }
     
+    func stop(music: Music) {
+        currentMusicPlayer?.stop()
+    }
+    
+     
     func play(effect: Effect) {
         guard let effectPlayer = try? AVAudioPlayer(soundFile: effect) else { return }
         effectPlayer.volume = effectsVolume

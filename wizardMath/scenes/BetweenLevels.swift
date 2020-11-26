@@ -40,7 +40,7 @@ class BetweenLevels : SKScene
         let levelChances = l.chances
         let levelMinToPass = l.minToPass
       
-        
+        let levels = l.getNumberOfOperatorLevels(levelOperator: symbol)
         var congrats = false
         if currentLevel == levelCompleted
         {
@@ -86,10 +86,17 @@ class BetweenLevels : SKScene
             starNode.position = CGPoint(x: frame.maxX*0.3, y: frame.midY)
             starNode.name = "star"
             self.addChild(starNode)
-            let nextNode = SKSpriteNode(imageNamed: "nb_nextlevel.png")
-            nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
-            nextNode.name = "next"
-            self.addChild(nextNode)
+            if l.levelNumber == levels {
+                let nextNode = SKSpriteNode(imageNamed: "nb_completed.png")
+                nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
+                nextNode.name = "restart"
+                self.addChild(nextNode)
+             } else {
+                let nextNode = SKSpriteNode(imageNamed: "nb_nextlevel.png")
+                nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
+                nextNode.name = "next"
+                self.addChild(nextNode)
+             }
         }
         
         
@@ -106,14 +113,17 @@ class BetweenLevels : SKScene
                 if node.name == "back"
                 {
                     // go back
-                    changeScene()
+                    changeScene(isNext: true)
                 }
                 else if node.name == "next"
                 {
                     // next
                     currentLevel += 1
                     defaults.set(self.currentLevel, forKey: "CurrentLevel")
-                    changeScene()
+                    changeScene(isNext: true)
+                }
+                else if node.name == "restart" {
+                    changeScene(isNext: false)
                 } else {
                 // do nothing
                 }
@@ -121,11 +131,17 @@ class BetweenLevels : SKScene
         }
     }
     
-    func changeScene()
+    func changeScene(isNext : Bool)
     {
-        let scene = SceneIntro(fileNamed: "SceneIntro")!
-        scene.scaleMode = .aspectFill
-        let transition = SKTransition.moveIn(with: .right, duration: 1)
-        self.view?.presentScene(scene, transition: transition)
+        if isNext {
+            let scene = SceneIntro(fileNamed: "SceneIntro")!
+            scene.scaleMode = .aspectFill
+            let transition = SKTransition.moveIn(with: .right, duration: 1)
+            self.view?.presentScene(scene, transition: transition)
+        } else {
+            let scene = SceneIntro(fileNamed: "IntroScene")!
+            scene.scaleMode = .aspectFill
+            let transition = SKTransition.moveIn(with: .right, duration: 1)
+        }
     }
 }

@@ -58,6 +58,23 @@ class MathLevel {
         
     }
     
+    func getNumberOfOperatorLevels(levelOperator:OperatorSymbols) -> Int {
+        var levels = 0
+        
+        switch levelOperator {
+        case OperatorSymbols.addition:
+            levels = additionLevels.count
+        case OperatorSymbols.subtraction:
+            levels = subtractionLevels.count
+        case OperatorSymbols.multiplication:
+            levels = multiplicationLevels.count
+        case OperatorSymbols.division:
+            levels = divisionLevels.count
+        }
+        
+        return levels
+    }
+    
     func getLevel(number:Int,levelOperator:OperatorSymbols)
     {
         var tmpNumber = number

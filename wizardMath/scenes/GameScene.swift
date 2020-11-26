@@ -55,6 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timeToFall = 0.0
     var levelType = ""
     var levelCase = ""
+    var levelAudio = Music(filename: "", type: "")
     
     var attempts = 0
     var levelPassed = false
@@ -72,8 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        
         player.effectsVolume = 0.5
         player.musicVolume = 0.3
-        player.play(music: Audio.MusicFiles.airship)
-        
+                
         var symbol : OperatorSymbols
         
         physicsWorld.contactDelegate = self
@@ -107,6 +107,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         levelNumber = l.levelNumber
         levelType = l.levelType
         levelCase = l.levelCase
+        let totalTimeOfLevel = timeToFall * Double(chances)
+        levelAudio = Audio.MusicFiles.airship
+        player.play(music: levelAudio, timeToPlay: totalTimeOfLevel)
         keypadLabel.text = ""
         let initialQuestionPosition = spawnQuestion(operators: operators, numbers: numbersToUse)
         self.attempts += 1
@@ -508,6 +511,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func changeScene()
     {
+        player.stop(music: levelAudio)
         let scene = BetweenLevels(fileNamed: "BetweenLevels")!
         scene.scaleMode = .aspectFill
         let transition = SKTransition.moveIn(with: .right, duration: 1)

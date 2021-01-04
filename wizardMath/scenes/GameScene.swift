@@ -108,7 +108,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         levelType = l.levelType
         levelCase = l.levelCase
         let totalTimeOfLevel = timeToFall * Double(chances)
-        levelAudio = Audio.MusicFiles.airship
+        levelAudio = numberFile()
         player.play(music: levelAudio, timeToPlay: totalTimeOfLevel)
         keypadLabel.text = ""
         let initialQuestionPosition = spawnQuestion(operators: operators, numbers: numbersToUse)
@@ -516,6 +516,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scene.scaleMode = .aspectFill
         let transition = SKTransition.moveIn(with: .right, duration: 1)
         self.view?.presentScene(scene, transition: transition)
+    }
+    
+    func numberFile() -> Music
+    {
+        let num = String(Int.random(in: 1...46))
+        return Music(filename: num, type: "mp3")
     }
 }
 

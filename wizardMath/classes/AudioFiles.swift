@@ -11,7 +11,7 @@ import Foundation
 struct Audio {
     
     struct MusicFiles {
-        static let airship = Music(filename: "trance-menu", type: "mp3")
+        // static let airship = Music(filename: "trance-menu", type: "mp3")
     }
     
     struct EffectFiles {

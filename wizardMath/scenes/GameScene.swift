@@ -299,10 +299,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if hats-1 == 0
             {
                 if let boomFire = SKEmitterNode(fileNamed: "BoomFire") {
-                               boomFire.position = mathQuestion.position
-                               boomFire.zPosition = -1
-                               addChild(boomFire)
-                           }
+                    boomFire.position = mathQuestion.position
+                    boomFire.zPosition = -1
+                    addChild(boomFire)
+                    player.play(effect: Audio.EffectFiles.wrongAnswer)
+                }
                            mathQuestion.removeFromParent()
                            respawn = true
                            missed += 1
@@ -488,6 +489,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 boomFire.position = nodeA.position
                 boomFire.zPosition = -1
                 addChild(boomFire)
+                player.play(effect: Audio.EffectFiles.boom)
             }
             nodeA.removeFromParent()
             respawn = true

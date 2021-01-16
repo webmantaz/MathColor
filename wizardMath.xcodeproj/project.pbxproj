@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F07225125B383AB0017B174 /* warp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F07225025B383AB0017B174 /* warp.mp3 */; };
+		6F07225625B383E80017B174 /* heal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F07225525B383E80017B174 /* heal.mp3 */; };
+		6F07225B25B3840A0017B174 /* explode.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F07225A25B3840A0017B174 /* explode.mp3 */; };
 		6F1357C724C653AF00A63BB6 /* SceneIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1357C624C653AF00A63BB6 /* SceneIntro.swift */; };
 		6F3FE03A25A38DA500A561FA /* 33.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F3FE00B25A38D9800A561FA /* 33.mp3 */; };
 		6F3FE03B25A38DA500A561FA /* 14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F3FE00C25A38D9800A561FA /* 14.mp3 */; };
@@ -113,6 +116,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F07225025B383AB0017B174 /* warp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = warp.mp3; sourceTree = "<group>"; };
+		6F07225525B383E80017B174 /* heal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heal.mp3; sourceTree = "<group>"; };
+		6F07225A25B3840A0017B174 /* explode.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explode.mp3; sourceTree = "<group>"; };
 		6F1357C624C653AF00A63BB6 /* SceneIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneIntro.swift; sourceTree = "<group>"; };
 		6F3FE00B25A38D9800A561FA /* 33.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 33.mp3; sourceTree = "<group>"; };
 		6F3FE00C25A38D9800A561FA /* 14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 14.mp3; sourceTree = "<group>"; };
@@ -280,6 +286,9 @@
 		6F6E2385252FB2910000A93A /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				6F07225A25B3840A0017B174 /* explode.mp3 */,
+				6F07225525B383E80017B174 /* heal.mp3 */,
+				6F07225025B383AB0017B174 /* warp.mp3 */,
 				6F6E2387252FB2DC0000A93A /* spell4.wav */,
 			);
 			path = sound;
@@ -518,6 +527,8 @@
 				6F3FE05525A38DA500A561FA /* 3.mp3 in Resources */,
 				6F3FE03D25A38DA500A561FA /* 8.mp3 in Resources */,
 				6F3FE04A25A38DA500A561FA /* 27.mp3 in Resources */,
+				6F07225625B383E80017B174 /* heal.mp3 in Resources */,
+				6F07225125B383AB0017B174 /* warp.mp3 in Resources */,
 				6F3FE05C25A38DA500A561FA /* 26.mp3 in Resources */,
 				6F3FE04625A38DA500A561FA /* 11.mp3 in Resources */,
 				6FA1F71424A7BB800095DF7E /* Main.storyboard in Resources */,
@@ -536,6 +547,7 @@
 				6F3FE04D25A38DA500A561FA /* 38.mp3 in Resources */,
 				6F3FE04125A38DA500A561FA /* 42.mp3 in Resources */,
 				6F608B7D24D249AF0084D128 /* BoomFire.sks in Resources */,
+				6F07225B25B3840A0017B174 /* explode.mp3 in Resources */,
 				6FA1F71624A7BB800095DF7E /* Assets.xcassets in Resources */,
 				6F608B7524D228B80084D128 /* Assets.xcassets in Resources */,
 				6F3FE04425A38DA500A561FA /* 21.mp3 in Resources */,

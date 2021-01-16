@@ -15,6 +15,8 @@ struct Audio {
     }
     
     struct EffectFiles {
-        static let spell = Effect(filename: "spell4", type: "wav")
+        static let spell = Effect(filename: "heal", type: "mp3")
+        static let boom = Effect(filename: "explode", type: "mp3")
+        static let wrongAnswer = Effect(filename: "warp", type: "mp3")
     }
 }

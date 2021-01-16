@@ -21,4 +21,4 @@ public struct Music: SoundFile {
 public struct Effect: SoundFile {
     public var filename: String
     public var type: String
-}
+} 

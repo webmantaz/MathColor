@@ -31,11 +31,56 @@ class UserLevelScore
         }
     }
     
-    func getLevelScore(Operstor:OperatorSymbols, Level:Int) -> Int
+    func getLevelScore(Operator:OperatorSymbols, Level:Int) -> Int
     {
-        if <#condition#> {
-            <#code#>
+        let levelString = String(Level)
+        var score = 0
+        var scoreArray = [String]()
+        switch Operator {
+        case .addition:
+            let scoreString = String(additionLevels[levelString]!)
+            scoreArray = scoreString.components(separatedBy: "_")
+            score = Int(scoreArray[0])!
+        case .division:
+            let scoreString = divisionLevels[levelString]!
+            scoreArray = scoreString.components(separatedBy: "_")
+            score = Int(scoreArray[0])!
+        case .multiplication:
+            let scoreString = multiplicationLevels[levelString]!
+            scoreArray = scoreString.components(separatedBy: "_")
+            score = Int(scoreArray[0])!
+        case .subtraction:
+            let scoreString = subtractionLevels[levelString]!
+            scoreArray = scoreString.components(separatedBy: "_")
+            score = Int(scoreArray[0])!
         }
+        return score
+    }
+    
+    func getLevelStars(Operator:OperatorSymbols, Level:Int) -> Int
+    {
+        let levelString = String(Level)
+        var stars = 0
+        var starsArray = [String]()
+        switch Operator {
+        case .addition:
+            let starsString = String(additionLevels[levelString]!)
+            starsArray = starsString.components(separatedBy: "_")
+            stars = Int(starsArray[1])!
+        case .division:
+            let starsString = divisionLevels[levelString]!
+            starsArray = starsString.components(separatedBy: "_")
+            stars = Int(starsArray[1])!
+        case .multiplication:
+            let starsString = multiplicationLevels[levelString]!
+            starsArray = starsString.components(separatedBy: "_")
+            stars = Int(starsArray[1])!
+        case .subtraction:
+            let starsString = subtractionLevels[levelString]!
+            starsArray = starsString.components(separatedBy: "_")
+            stars = Int(starsArray[1])!
+        }
+        return stars
     }
 }
 

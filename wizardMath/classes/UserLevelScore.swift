@@ -82,5 +82,49 @@ class UserLevelScore
         }
         return stars
     }
+    
+    func totalScore(Operator:OperatorSymbols) -> Int
+    {
+        var levels:[String: String] = [:]
+        switch Operator {
+        case .addition:
+            levels = additionLevels
+        case .division:
+            levels = divisionLevels
+        case .multiplication:
+            levels = multiplicationLevels
+        case .subtraction:
+            levels = subtractionLevels
+        }
+        var totalScore = 0
+        for (_, scoreStrng) in levels {
+            let score = scoreStrng.components(separatedBy: "_")[0]
+            totalScore = totalScore + Int(score)!
+        }
+        return totalScore
+    }
+    
+    func avgStars(Operator:OperatorSymbols) -> Float
+    {
+        var levels:[String: String] = [:]
+        switch Operator {
+        case .addition:
+            levels = additionLevels
+        case .division:
+            levels = divisionLevels
+        case .multiplication:
+            levels = multiplicationLevels
+        case .subtraction:
+            levels = subtractionLevels
+        }
+        var totalStars = 0
+        var count = 0
+        for (_, scoreStrng) in levels {
+            count+=1
+            let stars = scoreStrng.components(separatedBy: "_")[1]
+            totalStars = totalStars + Int(stars)!
+        }
+        return Float(totalStars / count)
+    }
 }
 

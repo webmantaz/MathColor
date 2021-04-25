@@ -47,6 +47,20 @@ class BetweenLevels : SKScene
                 congrats=true
         }
         let levelScore = defaults.integer(forKey: "levelScore")
+        let score = UserLevelScore()
+        switch levelOperator {
+        case "A":
+            score.getLevelScore(Operator: .addition, Level: l.levelNumber)
+        case "M":
+            symbol = OperatorSymbols.multiplication
+        case "S":
+            symbol = OperatorSymbols.subtraction
+        case "D":
+            symbol = OperatorSymbols.division
+        default:
+            symbol = OperatorSymbols.addition
+        }
+        
         
         var stars = 0
         

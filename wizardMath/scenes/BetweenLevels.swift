@@ -48,18 +48,7 @@ class BetweenLevels : SKScene
         }
         let levelScore = defaults.integer(forKey: "levelScore")
         let score = UserLevelScore()
-        switch levelOperator {
-        case "A":
-            score.getLevelScore(Operator: .addition, Level: l.levelNumber)
-        case "M":
-            symbol = OperatorSymbols.multiplication
-        case "S":
-            symbol = OperatorSymbols.subtraction
-        case "D":
-            symbol = OperatorSymbols.division
-        default:
-            symbol = OperatorSymbols.addition
-        }
+        
         
         
         var stars = 0
@@ -78,6 +67,19 @@ class BetweenLevels : SKScene
             } else {
                 stars = 3
             }
+        }
+        
+        switch levelOperator {
+        case "A":
+            score.putLevelScore(Operaotor: .addition, Level: currentLevel, Score: levelScore, Stars: stars)
+          case "M":
+            symbol = OperatorSymbols.multiplication
+        case "S":
+            symbol = OperatorSymbols.subtraction
+        case "D":
+            symbol = OperatorSymbols.division
+        default:
+            symbol = OperatorSymbols.addition
         }
         
         let cheerNode = SKLabelNode()
@@ -101,6 +103,10 @@ class BetweenLevels : SKScene
             starNode.name = "star"
             self.addChild(starNode)
             if l.levelNumber == levels {
+                starNode.isHidden = true
+                cheerNode.isHidden = false
+                let totalScore = score.totalScore(Operator: .addition)
+                cheerNode.text = String(totalScore)
                 let nextNode = SKSpriteNode(imageNamed: "nb_completed.png")
                 nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
                 nextNode.name = "restart"

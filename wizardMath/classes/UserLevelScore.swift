@@ -16,8 +16,42 @@ class UserLevelScore
     var multiplicationLevels:[String: String] = [:]
     var divisionLevels:[String: String] = [:]
     
+    func writeAllLevels(Operator: OperatorSymbols)
+    {
+        let defaults = UserDefaults.standard
+        switch Operator {
+        case .addition:
+            defaults.set(additionLevels, forKey: "additionScores");
+        case .multiplication:
+            defaults.set(multiplicationLevels, forKey: "multiplicationScores")
+        case .subtraction:
+            defaults.set(subtractionLevels, forKey: "subtractionScores")
+        case .division:
+            defaults.set(divisionLevels, forKey: "divisionScores")
+        }
+            
+    }
+    
+    func getAllLevels(Operator:OperatorSymbols)
+    {
+        let defaults = UserDefaults.standard
+        switch Operator {
+        case .addition:
+            additionLevels = defaults.object(forKey: "additionScores")  as? [String:String] ?? [:]
+        case .multiplication:
+            multiplicationLevels = defaults.object(forKey: "multiplicationScores")  as? [String:String] ?? [:]
+        case .subtraction:
+            subtractionLevels = defaults.object(forKey: "subtractionScores")  as? [String:String] ?? [:]
+        case .division:
+            divisionLevels = defaults.object(forKey: "divisionScores")  as? [String:String] ?? [:]
+    
+        }
+    }
+    
     func putLevelScore(Operaotor:OperatorSymbols, Level:Int, Score:Int, Stars:Int)
     {
+        getAllLevels(Operator: Operaotor)
+        
         let stringLevel = String(Level)
         switch Operaotor {
         case .addition:
@@ -29,6 +63,8 @@ class UserLevelScore
         case .subtraction:
             subtractionLevels.updateValue(String(Score)+"_"+String(Stars), forKey: stringLevel)
         }
+        
+        writeAllLevels(Operator: Operaotor)
     }
     
     func getLevelScore(Operator:OperatorSymbols, Level:Int) -> Int
@@ -38,6 +74,7 @@ class UserLevelScore
         var scoreArray = [String]()
         switch Operator {
         case .addition:
+
             let scoreString = String(additionLevels[levelString]!)
             scoreArray = scoreString.components(separatedBy: "_")
             score = Int(scoreArray[0])!
@@ -126,5 +163,25 @@ class UserLevelScore
         }
         return Float(totalStars / count)
     }
+    
+    clearLevels(Operator: OperatorSymbols)
+    {
+        switch Operator {
+        case .addition:
+            additionLevels = [:]
+            writeAllLevels(Operator: .addition)
+        case .multiplication:
+            multiplicationLevels = [:]
+            writeAllLevels(Operator: .multiplication)
+        case .subtraction:
+            subtractionLevels = [:]
+            writeAllLevels(Operator: .subtraction)
+        case .division:
+            divisionLevels = [:]
+            writeAllLevels(Operator: .division)
+        }
+        
+    }
+    
 }
 

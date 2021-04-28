@@ -105,8 +105,22 @@ class BetweenLevels : SKScene
             if l.levelNumber == levels {
                 starNode.isHidden = true
                 cheerNode.isHidden = false
-                let totalScore = score.totalScore(Operator: .addition)
-                cheerNode.text = String(totalScore)
+                var totalScore = 0
+                switch levelOperator {
+                case "A":
+                    totalScore = score.totalScore(Operator: .addition)
+                case "M":
+                    score.totalScore(Operator: .multiplication)
+                case "S":
+                    score.totalScore(Operator: .subtraction)
+                case "D":
+                    score.totalScore(Operator: .division)
+                default:
+                    score.totalScore(Operator: .addition)
+                }
+                
+                
+                cheerNode.text = "Total Score: " + String(totalScore)
                 let nextNode = SKSpriteNode(imageNamed: "nb_completed.png")
                 nextNode.position = CGPoint(x: frame.maxX*0.7, y: frame.maxY/3.0)
                 nextNode.name = "restart"
@@ -143,6 +157,7 @@ class BetweenLevels : SKScene
                     changeScene(isNext: true)
                 }
                 else if node.name == "restart" {
+                    defaults.set("", forKey: "Operator")
                     changeScene(isNext: false)
                 } else {
                 // do nothing
@@ -159,9 +174,10 @@ class BetweenLevels : SKScene
             let transition = SKTransition.moveIn(with: .right, duration: 1)
             self.view?.presentScene(scene, transition: transition)
         } else {
-            let scene = SceneIntro(fileNamed: "IntroScene")!
+            let scene = IntroScene(fileNamed: "IntroScene")!
             scene.scaleMode = .aspectFill
             let transition = SKTransition.moveIn(with: .right, duration: 1)
+            self.view?.presentScene(scene, transition: transition)
         }
     }
 }

@@ -97,26 +97,31 @@ class IntroScene : SKScene
             let loc = touch.location(in: self)
             let  actionNode = self.nodes(at: loc)
             let defailts = UserDefaults.standard
+            let score =  UserLevelScore()
             for node in actionNode {
                 switch node.name! {
                 case "continue":
                     changeScene()
                 case "addition":
+                    score.clearLevels(Operator: .addition)
                     defailts.set(1, forKey: "CurrentLevel")
                     defailts.set(1, forKey: "LevelCompleted")
                     defailts.set("A", forKey: "Operator")
                     changeScene()
                 case "multiplication":
+                    score.clearLevels(Operator: .multiplication)
                     defailts.set(1, forKey: "CurrentLevel")
                     defailts.set(1, forKey: "LevelCompleted")
                     defailts.set("M", forKey: "Operator")
                     changeScene()
                 case "subtraction":
+                    score.clearLevels(Operator: .subtraction)
                     defailts.set(1, forKey: "CurrentLevel")
                     defailts.set(1, forKey: "LevelCompleted")
                     defailts.set("S", forKey: "Operator")
                     changeScene()
                 case "division":
+                    score.clearLevels(Operator: .division)
                     defailts.set(1, forKey: "CurrentLevel")
                     defailts.set(1, forKey: "LevelCompleted")
                     defailts.set("D", forKey: "Operator")
@@ -141,3 +146,4 @@ class IntroScene : SKScene
     }
     
     
+}

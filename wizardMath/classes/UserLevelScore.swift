@@ -164,7 +164,7 @@ class UserLevelScore
         return Float(totalStars / count)
     }
     
-    clearLevels(Operator: OperatorSymbols)
+    func clearLevels(Operator: OperatorSymbols)
     {
         switch Operator {
         case .addition:

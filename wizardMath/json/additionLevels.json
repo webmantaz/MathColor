@@ -1,79 +1,98 @@
-
 [
-    {
-        "levelName":"Entry",
-        "levelNumber":1,
-        "levelType":"NumberRange",
-        "levelCase":"Negative",
-        "chances":5,
-        "minToPass":1,
-        "timeToFall":8,
-        "numbersToUse":[1,2,-3],
-        "operators":["A"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
-    },
-    {
-        "levelName":"Hard",
-        "levelNumber":2,
-        "levelType":"NumberRange",
-        "levelCase":"None",
-        "chances":5,
-        "minToPass":1,
-        "timeToFall":8,
-        "numbersToUse":[4,5,6],
-        "operators":["A"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
-    },
-    {
-        "levelName":"Harder",
-        "levelNumber":3,
-        "levelType":"NumberRange",
-        "levelCase":"None",
-        "chances":5,
-        "minToPass":1,
-        "timeToFall":8,
-        "numbersToUse":[7,8,9],
-        "operators":["A"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
-    },
-    {
-        "levelName":"Hardest",
-        "levelNumber":4,
-        "levelType":"NumberRange",
-        "levelCase":"None",
-        "chances":5,
-        "minToPass":1,
-        "timeToFall":12,
-        "numbersToUse":[10,11,12],
-        "operators":["A"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
-    }
-
+  {
+    "levelName" : "Entry",
+    "levelNumber" : 1,
+    "levelType" : "NumberRange",
+    "levelCase" : "None",
+    "chances" : 5,
+    "minToPass" : 1,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      1,
+      2,
+      5
+    ],
+    "operators" : [
+      "A"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music"
+  },
+  {
+    "levelName" : "Hard",
+    "levelNumber" : 2,
+    "levelType" : "NumberRange",
+    "levelCase" : "None",
+    "chances" : 5,
+    "minToPass" : 1,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      4,
+      5,
+      6
+    ],
+    "operators" : [
+      "A"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music"
+  },
+  {
+    "levelName" : "Harder",
+    "levelNumber" : 3,
+    "levelType" : "NumberRange",
+    "levelCase" : "None",
+    "chances" : 5,
+    "minToPass" : 1,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      7,
+      8,
+      9
+    ],
+    "operators" : [
+      "A"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music"
+  },
+  {
+    "levelName" : "Hardest",
+    "levelNumber" : 4,
+    "levelType" : "NumberRange",
+    "levelCase" : "None",
+    "chances" : 5,
+    "minToPass" : 1,
+    "timeToFall" : 12,
+    "numbersToUse" : [
+      10,
+      11,
+      12
+    ],
+    "operators" : [
+      "A"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music"
+  }
 ]
-
-
-

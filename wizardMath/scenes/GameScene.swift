@@ -178,37 +178,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     kpValue = editKeyPad(keyPressed: "0", event: kpEvent.number)
                     if kpValue == 0
                     {
-                        keypadLabel.text = ""
-                        kpLabel = ""
+                        keypadLabel.text = "0"
+                        kpLabel = "0"
                     } else {
                         keypadLabel.text = kpLabel
                     }
+                    
                 case "1":
                     kpValue = editKeyPad(keyPressed: "1", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "2":
                     kpValue = editKeyPad(keyPressed: "2", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "3":
                     kpValue = editKeyPad(keyPressed: "3", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "4":
                     kpValue = editKeyPad(keyPressed: "4", event: kpEvent.number)
                     keypadLabel.text = kpLabel
                 case "5":
                     kpValue = editKeyPad(keyPressed: "5", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "6":
                     kpValue = editKeyPad(keyPressed: "6", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "7":
                     kpValue = editKeyPad(keyPressed: "7", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "8":
                     kpValue = editKeyPad(keyPressed: "8", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "9":
                     kpValue = editKeyPad(keyPressed: "9", event: kpEvent.number)
+                    kpLabel = removeZeros()
                     keypadLabel.text = kpLabel
                 case "enter":
                     kpValue = editKeyPad(keyPressed: "9", event: kpEvent.enter)
@@ -241,6 +250,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
      
+    func removeZeros() -> String {
+        var tmpKeyLabel = kpLabel
+        let tmpCount = kpLabel.count
+        if tmpKeyLabel.prefix(2) == "-0" {
+            tmpKeyLabel = "-" + tmpKeyLabel.suffix(tmpCount-2)
+        } else if tmpKeyLabel.prefix(1) == "0" {
+            tmpKeyLabel = String(tmpKeyLabel.suffix(tmpCount-1))
+            
+        }
+        return tmpKeyLabel
+    }
+
+    
     
     func spawnQuestion(operators: [String], numbers:[Int]) -> CGPoint
     {

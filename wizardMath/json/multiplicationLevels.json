@@ -1,78 +1,530 @@
-
 [
-    {
-        "levelName":"2's",
-        "levelNumber":1,
-        "levelType":"Factor",
-        "levelCase":"None",
-        "chances":25,
-        "minToPass":15,
-        "timeToFall":8,
-        "numbersToUse":[2],
-        "operators":["M"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
-    },
-    {
-        "levelName":"3's",
-        "levelNumber":2,
-        "levelType":"Factor",
-        "levelCase":"None",
-        "chances":25,
-        "minToPass":15,
-        "timeToFall":8,
-        "numbersToUse":[3],
-        "operators":["M"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
-    },
-    {
-        "levelName":"4's",
-        "levelNumber":3,
-        "levelType":"Factor",
-        "levelCase":"None",
-        "chances":25,
-        "minToPass":15,
-        "timeToFall":8,
-        "numbersToUse":[4],
-        "operators":["M"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
-    },
-    {
-        "levelName":"2s, 3s and 4s",
-        "levelNumber":4,
-        "levelType":"Factor",
-        "levelCase":"None",
-        "chances":25,
-        "minToPass":15,
-        "timeToFall":8,
-        "numbersToUse":[2,3,4],
-        "operators":["M"],
-        "backgroundColor":"blue",
-        "digitImageSet":"Default",
-        "missedImagePrefix":"missed",
-        "correctImagePrefix":"correct",
-        "missedSoundPrefix":"missed",
-        "correctSoundPrefix":"correct",
-        "soundtrack":"music"
+  {
+    "levelName" : "1's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      1
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
     }
-
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  },
+  {
+    "levelName" : "2's",
+    "levelNumber" : 1,
+    "levelType" : "Factor",
+    "levelCase" : "None",
+    "chances" : 12,
+    "minToPass" : 6,
+    "timeToFall" : 8,
+    "numbersToUse" : [
+      2
+    ],
+    "operators" : [
+      "M"
+    ],
+    "backgroundColor" : "blue",
+    "digitImageSet" : "Default",
+    "missedImagePrefix" : "missed",
+    "correctImagePrefix" : "correct",
+    "missedSoundPrefix" : "missed",
+    "correctSoundPrefix" : "correct",
+    "soundtrack" : "music",
+    "ArrayItem" : {
+      "levelName" : "2's",
+      "levelNumber" : 1,
+      "levelType" : "Factor",
+      "levelCase" : "None",
+      "chances" : 25,
+      "minToPass" : 15,
+      "timeToFall" : 8,
+      "numbersToUse" : [
+        2
+      ],
+      "operators" : [
+        "M"
+      ],
+      "backgroundColor" : "blue",
+      "digitImageSet" : "Default",
+      "missedImagePrefix" : "missed",
+      "correctImagePrefix" : "correct",
+      "missedSoundPrefix" : "missed",
+      "correctSoundPrefix" : "correct",
+      "soundtrack" : "music"
+    }
+  }
 ]
-
-
